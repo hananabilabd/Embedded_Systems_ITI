@@ -1,0 +1,16 @@
+
+
+PROM is very much 'read only'. This is because E/EPROM requires:
+
+erasure by UV (EPROM) or an 0xFF cycle (EEPROM),
+switching into a different mode for programming ('writing') data,
+which in some cases requires different power conditions, wait times, etc.
+Limitations on write cycles would make all extant PROMs useless for the kind of high-volume data transfer/manipulation needed by many programs.
+...all of which mean that the act of writing to such memory is slow, can't be efficiently interleaved with read operations, actively wears out the chip, etc.
+
+PROM is on a totally different league than RAM with equivalent read specs. Hence why it wasn't marketed as any form of RAM. The backlash would've been colossal!
+
+So, we could perhaps call it Read Mostly Memory or, for the pedants, EWRPROM: Eventually Writable, 
+Runtime Practically Read Only Memory... but in practical terms, ROM is bang on the mark
+
+Electrically erasable programmable ROM (EEPROM)—Can be erased by an electrical charge, then written to by using higher-than-normal voltage

@@ -1,0 +1,24 @@
+<circuit type="simu">
+ 
+Resistor-24: 
+<item objectName="Resistor-24" Show_res="true" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" Unit=" O" y="-124" x="-140" itemtype="Resistor" id="Resistor-24" Resistance="100" labelx="-16" rotation="90" labelrot="-90"/>
+ 
+Ground (0 V)-22: 
+<item objectName="Ground (0 V)-22" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" y="-20" x="-140" itemtype="Ground" id="Ground (0 V)-22" labelx="-16" rotation="0" labelrot="0"/>
+ 
+Led-20: 
+<item objectName="Led-20" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" y="-68" x="-140" threshold="2.3999999999999999" MaxCurrent="0.029999999999999999" itemtype="Led" id="Led-20" labelx="-16" rotation="90" labelrot="-90"/>
+ 
+atmega328-10: 
+<item program="E:/user/projets/QAC/LED_Blinking_328/Release/LED_Blinking_328.hex" objectName="atmega328-10" labely="-26" valLabely="0" Show_id="true" valLabelx="0" valLabRot="0" y="-180" x="-76" itemtype="AVR" id="atmega328-10" Mhz="1" labelx="-24" rotation="0" labelrot="0"/>
+ 
+Connector-23: 
+<item objectName="Connector-23" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" y="-52" x="-140" itemtype="Connector" id="Connector-23" startpinid="Led-20rnod" labelx="-16" rotation="0" labelrot="0" pointList="-140,-52,-140,-36" endpinid="Ground (0 V)-22Gnod" enodeid="enode-23"/>
+ 
+Connector-25: 
+<item objectName="Connector-25" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" y="-108" x="-140" itemtype="Connector" id="Connector-25" startpinid="Resistor-24rnod" labelx="-16" rotation="0" labelrot="0" pointList="-140,-108,-140,-84" endpinid="Led-20lnod" enodeid="enode-25"/>
+ 
+Connector-26: 
+<item objectName="Connector-26" labely="-24" valLabely="0" Show_id="false" valLabelx="0" valLabRot="0" y="-148" x="-84" itemtype="Connector" id="Connector-26" startpinid="atmega328-10-PD2" labelx="-16" rotation="0" labelrot="0" pointList="-84,-148,-140,-148,-140,-140" endpinid="Resistor-24lnod" enodeid="enode-26"/>
+ 
+</circuit>
