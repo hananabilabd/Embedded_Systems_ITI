@@ -1,0 +1,254 @@
+19:05:34 **** Clean-only build of configuration Debug for project first ****
+make clean 
+rm -rf  first.hex  ./main.o  sizedummy  first.lss  ./main.d  first.elf
+ 
+19:05:35 **** Build of configuration Debug for project first ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:8:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:11: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: first.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,first.map -mmcu=atmega16 -o "first.elf"  ./main.o   
+Finished building target: first.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S first.elf  >"first.lss"
+Finished building: first.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex first.elf  "first.hex"
+Finished building: first.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:15:56 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:18:25 **** Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:59:45 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:07:14 **** Build of configuration Debug for project Third ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Third.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Third.map -mmcu=atmega16 -o "Third.elf"  ./main.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [Third.elf] Error 1
+17:07:16 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:41:57 **** Incremental Build of configuration Debug for project Third ****
+make all 
+Building target: Third.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Third.map -mmcu=atmega16 -o "Third.elf"  ./main.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [Third.elf] Error 1
+17:41:57 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:44:45 **** Build of configuration Debug for project Third ****
+make all 
+Building target: Third.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Third.map -mmcu=atmega16 -o "Third.elf"  ./main.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [Third.elf] Error 1
+18:44:47 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:53:00 **** Incremental Build of configuration Debug for project Third ****
+make all 
+Building target: Third.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Third.map -mmcu=atmega16 -o "Third.elf"  ./main.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [Third.elf] Error 1
+18:53:00 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:59:39 **** Incremental Build of configuration Debug for project Third ****
+make all 
+Building target: Third.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Third.map -mmcu=atmega16 -o "Third.elf"  ./main.o   
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o:(.init9+0x0): undefined reference to `main'
+make: *** [Third.elf] Error 1
+18:59:39 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:13:14 **** Incremental Build of configuration Debug for project Third ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:14:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'lcd_init':
+../main.c:19: warning: implicit declaration of function 'set_bit'
+../main.c:22: warning: implicit declaration of function 'clr_bit'
+../main.c:23: warning: implicit declaration of function 'lcd_sendcommand'
+../main.c: At top level:
+../main.c:26: error: expected ')' before 'command'
+../main.c:35: error: expected ')' before 'character'
+make: *** [main.o] Error 1
+19:13:15 **** Incremental Build of configuration Debug for project first ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 first.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    5416 bytes (33.1% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

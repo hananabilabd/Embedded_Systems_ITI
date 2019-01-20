@@ -1,0 +1,125 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 24, 2018
+ *      Author: Hanna Nabil
+ */
+
+#include "typedef.h"
+#include"LCD.h"
+#define F_CPU 12000000UL
+#include <util/delay.h>
+#include "DIO.h"
+#include "Keypad.h"
+int main(void)
+{// Assignment to make a DC motor operate with 2 transistors + 2 relays
+
+
+
+ DIO_SetPinDirection('C',0,1);// output -- base of transistor
+ DIO_SetPinDirection('C',1,1);// output -- base of transistor
+ DIO_SetPinDirection('C',2,1);// pole of  1st relay
+
+ DIO_SetPinDirection('C',3,1);// pole of 2nd relay
+
+
+
+	while(1){
+		 DIO_SetPinValue('C',0,1); // output through the transistor , Making it high will make pole and throw 1 are connected
+		 DIO_SetPinValue('C',1,0); // output to the second transistor
+
+		 DIO_SetPinValue('C',2,1);// output pole high --> so dc motor clock wise
+
+		 DIO_SetPinValue('C',3,0);// output pole
+
+
+		 _delay_ms(3000);
+
+		 DIO_SetPinValue('C',0,0); // this will make the pole and the 2nd throw(which is connected to nothing) connected
+		 DIO_SetPinValue('C',1,0);
+
+		 DIO_SetPinValue('C',2,0);// output pole
+		 DIO_SetPinValue('C',3,0);// output pole
+
+		 _delay_ms(2000);
+
+		 DIO_SetPinValue('C',0,1);
+		 DIO_SetPinValue('C',1,0);
+
+		 DIO_SetPinValue('C',2,0);// output pole
+		 DIO_SetPinValue('C',3,1);// output pole
+
+		 _delay_ms(3000);
+
+
+
+
+
+	}
+
+return 0;
+
+}
+/*
+int main(void)
+{// optocoupler
+
+
+
+ DIO_SetPinDirection('C',0,1);// output
+ DIO_SetPinValue('C',0,1);
+ DIO_SetPinDirection('C',2,1);// output
+
+	while(1){
+
+		 DIO_SetPinValue('C',2,1);
+		 _delay_ms(500);
+		 DIO_SetPinValue('C',2,0);
+		 _delay_ms(500);
+
+
+
+	}
+
+return 0;
+
+}
+*/
+/* H-bridge
+int main(void)
+{
+
+ DIO_SetPinDirection('C',0,1);// output
+ DIO_SetPinDirection('C',1,1);// output
+ DIO_SetPinDirection('C',2,1);// output
+ DIO_SetPinDirection('C',3,1);// output
+
+	while(1){
+
+		DIO_SetPinValue('C',0,1);
+		DIO_SetPinValue('C',1,0);
+		DIO_SetPinValue('C',2,1);
+		DIO_SetPinValue('C',3,0);
+		//_delay_ms(10000);
+		for(u8 i =0 ; i<1000;i++){
+
+		}
+		DIO_SetPinValue('C',0,0);
+		DIO_SetPinValue('C',1,0);
+		DIO_SetPinValue('C',2,0);
+		DIO_SetPinValue('C',3,0);
+		_delay_ms(4000);
+		DIO_SetPinValue('C',0,0);
+		DIO_SetPinValue('C',1,1);
+		DIO_SetPinValue('C',2,0);
+		DIO_SetPinValue('C',3,1);
+		_delay_ms(10000);
+
+
+
+	}
+
+return 0;
+
+}
+*/

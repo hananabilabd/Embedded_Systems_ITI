@@ -1,0 +1,20 @@
+19:13:14 **** Incremental Build of configuration Debug for project Third ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:14:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../main.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'lcd_init':
+../main.c:19: warning: implicit declaration of function 'set_bit'
+../main.c:22: warning: implicit declaration of function 'clr_bit'
+../main.c:23: warning: implicit declaration of function 'lcd_sendcommand'
+../main.c: At top level:
+../main.c:26: error: expected ')' before 'command'
+../main.c:35: error: expected ')' before 'character'
+make: *** [main.o] Error 1
+
+19:13:14 Build Finished (took 396ms)
+
