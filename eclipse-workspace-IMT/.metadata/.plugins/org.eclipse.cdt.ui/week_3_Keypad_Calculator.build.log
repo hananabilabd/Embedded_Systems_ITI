@@ -1,0 +1,40 @@
+20:55:43 **** Incremental Build of configuration Debug for project week_3_Keypad_Calculator ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_3_Keypad_Calculator.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_3_Keypad_Calculator.hex"
+avrdude: input file week_3_Keypad_Calculator.hex auto detected as Intel Hex
+avrdude: writing flash (28172 bytes):
+
+Writing | ################################################## | 100% 18.26s
+
+avrdude: 28172 bytes of flash written
+avrdude: verifying flash memory against week_3_Keypad_Calculator.hex:
+avrdude: load data flash data from input file week_3_Keypad_Calculator.hex:
+avrdude: input file week_3_Keypad_Calculator.hex auto detected as Intel Hex
+avrdude: input file week_3_Keypad_Calculator.hex contains 28172 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 14.16s
+
+avrdude: verifying ...
+avrdude: 28172 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+20:56:16 Build Finished (took 32s.965ms)
+

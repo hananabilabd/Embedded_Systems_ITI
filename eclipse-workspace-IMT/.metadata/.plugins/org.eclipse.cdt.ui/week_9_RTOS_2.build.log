@@ -1,0 +1,92 @@
+11:31:04 **** Incremental Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10216 bytes):
+
+Writing | ################################################## | 100% 6.21s
+
+avrdude: 10216 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10216 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.16s
+
+avrdude: verifying ...
+avrdude: 10216 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+11:31:18 Build Finished (took 14s.273ms)
+

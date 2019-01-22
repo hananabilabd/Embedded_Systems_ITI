@@ -1,0 +1,10 @@
+02:37:05 **** Incremental Build of configuration Debug for project hello ****
+make all 
+Building target: hello
+Invoking: Cross GCC Linker
+gcc  -o "hello"  ./main.o   
+Finished building target: hello
+ 
+
+02:37:05 Build Finished (took 300ms)
+

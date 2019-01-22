@@ -2,103 +2,132 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#define intBeforePoint 0
-#define intAfterPoint 1
 #define BinarySize 8
-void printBinary(int decimal ){
-    char bin1[30];
-    int  c, k,slicer=0,counter,i=0;
-    printf("binary number= ");
-    for (c = BinarySize; c >= 0; c--)
+#define mantissaSize 23
+#define postive 0
+#define negative 1
+int floatArr[mantissaSize]={0};
+int integerArr[mantissaSize]={0};
+int intFloatArr[mantissaSize]={0};
+int sign=postive;
+void printBinary(signed char decimal ){
+    int  c, k;
+    printf("exp in binary= ");
+    for (c = 7; c >= 0; c--)
   {
     k = decimal >> c;
 
-    if (k & 1){
+    if (k & 1)
       printf("1");
-      bin1[c]='1';
+    else
+      printf("0");
+  }
+
+  printf("\n");
+}
+void integerToBinaryArr(int decimal ){
+    int  c, k,counter,foundOneFlag=0,firstTime=0,foundOneFlagLast=0,mantissaPoint=0,size=0;
+    printf("Integer Binary number= ");
+    for (c = 7,counter=0; c >= 0; c--,counter++)
+  {
+    k = decimal >> c;
+    if (k & 1 ){
+      printf("1");
+      intFloatArr[counter]=1;
+      if (firstTime ==0){
+        firstTime=1;
+      foundOneFlag=counter;}
+
     }
     else{
       printf("0");
-      bin1[c]='0';
-    }
+      intFloatArr[counter]=0;
+      }
   }
   printf("\n");
 
-for (i=0 ; i<=BinarySize;i++){
-        printf("%c",bin1[i]);
-  }
-  printf("\n");
-
-
-}
-
-
-
-
-int toString(char a[],int from,int to , int flag) {
-  int c, sign, n;
-  int offset=from;
-    if (flag ==intBeforePoint){
-  if (a[0] == '-') {  // Handle negative integers
-    sign = -1;
-  }
-
-  if (sign == -1) {  // Set starting position to convert
-    offset = 1;
-  }
-  else {
-    offset = 0;
-  }
+     size =counter-foundOneFlag;
+     if (decimal ==0){size=0;}
+    printf("\nsize=%d",size);
+     printf("\ncomplete Array=");
+    for (int i=0,counter=foundOneFlag;i<size;i++,counter++){//shifting the integer values t begin with ones
+        intFloatArr[i]=intFloatArr[counter];
+        printf("%d",intFloatArr[i]);
     }
+    for (int i=size+1, j=0;i<mantissaSize;i++,j++){//append  float
+        intFloatArr[i]=floatArr[j];
+        printf("%d",intFloatArr[i]);
+    }
+  printf("\n");
+  printf("complete Array=");
+  for (int i=0;i<mantissaSize;i++){//print
+         printf("%d",intFloatArr[i]);
+        }
+        printf("\n");
 
-  n = 0;
-
-  for (c = offset; c <= to; c++) {
-    n = n * 10 + a[c] - '0';
+  if (intFloatArr[0]==1){
+    mantissaPoint=size-1;
   }
-
-  if (sign == -1 && flag ==intBeforePoint) {
-    n = -n;
-  }
-  return n;
-}
-int FloatParse(char arr[], int size){
-	unsigned int num =0,temp,bit1=0;
-	signed int beforePointInt;
-	int afterPointInt=0;
-	int pointTemp;
-    for ( int i=0 ; i <=size; i++){
-        if (arr[i]==46){
-                pointTemp =i;
+  else {// =0
+    for (int i=1;i<mantissaSize;i++){//for loop to search for the first 1 in the intFloatArray
+        if (intFloatArr[i] ==1){
+            mantissaPoint=-i;
+            break;
         }
     }
-	afterPointInt=toString(arr,pointTemp+1,size,intAfterPoint);
-    beforePointInt=toString(arr,0,pointTemp-1,intBeforePoint);
-     printf("beforePointInt = %d\n",beforePointInt);
-	printf("afterPointInt = %d\n",afterPointInt);
-	printBinary(beforePointInt);
+  }
+  printf("exp=%d\n",mantissaPoint);
+  printBinary(mantissaPoint);
 
-	return num;
+
+
 }
 
 
+
+void FloatNumber(double realValue){
+
+    int i=0;
+    double temp;
+	int intValue = (int)realValue;
+	double floatValue = realValue - (double)intValue;
+    if (intValue <0){
+        intValue =-1*intValue;
+        floatValue=floatValue*-1;
+        sign =negative;
+    }
+    printf("number=%d.%.6f\n",intValue,floatValue);
+    temp=floatValue;
+    while (i<mantissaSize){
+        temp=temp*2;
+        if (temp >= 1){
+            temp=temp-1;
+            floatArr[i]=1;
+        }
+        else {
+            floatArr[i]=0;
+        }
+        i++;
+    }
+    i=0;
+     printf("Float Binary number=");
+    while (i<mantissaSize){
+        printf("%d",floatArr[i]);
+        i++;
+    }
+    printf("\n");
+    integerToBinaryArr(intValue);
+
+
+
+}
 int main (void){
-	char floatNum[33], result[33];
-    int len1, len2, check,nOfShifts;
+    double floatNum;
+    printf("Enter Float number = ");
+    scanf("%lf", &floatNum);
+    FloatNumber(floatNum);
 
-	 printf("Enter Float number = ");
-    scanf("%s", floatNum);
-    int i = strlen(floatNum) - 1;
-    FloatParse(floatNum,i);
-
-    /////////////////////////////////////
-
-
-
-
-
-	//printBinary(y);
-
+    printf("Sign =%d",sign);
 
 	return 0;
 }

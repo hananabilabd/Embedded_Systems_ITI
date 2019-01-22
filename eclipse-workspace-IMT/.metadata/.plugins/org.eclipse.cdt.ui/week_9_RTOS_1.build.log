@@ -1,0 +1,18 @@
+12:19:12 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+
+12:19:13 Build Finished (took 471ms)
+

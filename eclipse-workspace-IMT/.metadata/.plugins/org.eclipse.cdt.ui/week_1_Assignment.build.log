@@ -1,0 +1,61 @@
+12:58:32 **** Incremental Build of configuration Debug for project week_1_Assignment ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: week_1_Assignment.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_1_Assignment.map -mmcu=atmega32 -o "week_1_Assignment.elf"  ./DIO.o ./main.o   
+Finished building target: week_1_Assignment.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_1_Assignment.elf  "week_1_Assignment.hex"
+Finished building: week_1_Assignment.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_1_Assignment.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_1_Assignment.hex"
+avrdude: input file week_1_Assignment.hex auto detected as Intel Hex
+avrdude: writing flash (8504 bytes):
+
+Writing | ################################################## | 100% 5.15s
+
+avrdude: 8504 bytes of flash written
+avrdude: verifying flash memory against week_1_Assignment.hex:
+avrdude: load data flash data from input file week_1_Assignment.hex:
+avrdude: input file week_1_Assignment.hex auto detected as Intel Hex
+avrdude: input file week_1_Assignment.hex contains 8504 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.29s
+
+avrdude: verifying ...
+avrdude: 8504 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+12:58:42 Build Finished (took 10s.348ms)
+

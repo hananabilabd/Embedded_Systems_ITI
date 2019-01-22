@@ -1,0 +1,40 @@
+14:24:50 **** Incremental Build of configuration Debug for project week_7_SPI ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_7_SPI.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_7_SPI.hex"
+avrdude: input file week_7_SPI.hex auto detected as Intel Hex
+avrdude: writing flash (27232 bytes):
+
+Writing | ################################################## | 100% 18.42s
+
+avrdude: 27232 bytes of flash written
+avrdude: verifying flash memory against week_7_SPI.hex:
+avrdude: load data flash data from input file week_7_SPI.hex:
+avrdude: input file week_7_SPI.hex auto detected as Intel Hex
+avrdude: input file week_7_SPI.hex contains 27232 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 15.25s
+
+avrdude: verifying ...
+avrdude: 27232 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+14:25:24 Build Finished (took 34s.349ms)
+

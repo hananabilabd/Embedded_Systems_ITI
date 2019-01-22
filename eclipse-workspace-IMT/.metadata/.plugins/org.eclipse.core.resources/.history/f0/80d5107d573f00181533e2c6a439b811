@@ -1,0 +1,54 @@
+/*
+ * main.c
+ *
+ *  Created on: Feb 24, 2018
+ *      Author: Hanna Nabil
+ */
+
+#include "typedef.h"
+#include "IO.h"
+#include "macros.h"
+#define F_CPU 12000000UL
+#include <util/delay.h>
+#include "DIO.h"
+#include "Timer.h"
+#include "UART.h"
+// This assignment is to make a LDR controlling a Led in an inversely manner
+int main(void)
+{
+	u8 arr []="Hannon";
+	u8 a []="han";
+
+	int i =0;
+	UART_INIT();
+	Timer0_Init();
+	u8 Data;
+	while (1){
+		Data = UART_ReceiveData();
+
+
+		if (Data=='a'){
+
+			DIO_SetPinValue('D',7,1);
+			Timer0_PWM(88);
+		}
+		else if (Data=='s'){
+			DIO_SetPinValue('D',7,0);
+			Timer0_PWM(83);
+
+		}
+		else if (Data=='d'){
+					DIO_SetPinValue('D',7,0);
+					Timer0_PWM(78);
+
+				}
+		else if (Data=='f'){
+							DIO_SetPinValue('D',7,0);
+
+						}
+
+
+	}
+	return 0;
+}
+

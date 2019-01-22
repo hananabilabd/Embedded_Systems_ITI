@@ -1,0 +1,132 @@
+15:22:22 **** Incremental Build of configuration Debug for project week_7_UART ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+../ADC.c: In function '__vector_16':
+../ADC.c:112: warning: implicit declaration of function 'LCD_WriteString'
+../ADC.c:113: warning: implicit declaration of function 'LCD_SetPosition'
+../ADC.c:115: warning: implicit declaration of function 'LCD_Write_Float'
+../ADC.c:108: warning: unused variable 'n'
+Finished building: ../ADC.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_Write_Special':
+../LCD.c:126: warning: left-hand operand of comma expression has no effect
+../LCD.c:140: warning: left-hand operand of comma expression has no effect
+Finished building: ../LCD.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c:21:6: warning: character constant too long for its type
+../Timer.c:21:21: warning: character constant too long for its type
+../Timer.c:24:8: warning: character constant too long for its type
+../Timer.c:24:23: warning: character constant too long for its type
+../Timer.c:27:6: warning: character constant too long for its type
+../Timer.c:27:21: warning: character constant too long for its type
+../Timer.c:28: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:29: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:42:8: warning: character constant too long for its type
+../Timer.c:42:23: warning: character constant too long for its type
+../Timer.c:49:10: warning: character constant too long for its type
+../Timer.c:49:25: warning: character constant too long for its type
+../Timer.c:55:10: warning: character constant too long for its type
+../Timer.c:55:25: warning: character constant too long for its type
+../Timer.c:68:8: warning: character constant too long for its type
+../Timer.c:68:27: warning: multi-character character constant
+../Timer.c:75:10: warning: character constant too long for its type
+../Timer.c:81:10: warning: character constant too long for its type
+../Timer.c:81:28: warning: multi-character character constant
+../Timer.c:85:10: warning: character constant too long for its type
+../Timer.c:85:28: warning: character constant too long for its type
+../Timer.c:91:10: warning: character constant too long for its type
+../Timer.c:91:28: warning: character constant too long for its type
+../Timer.c:121:8: warning: character constant too long for its type
+../Timer.c:121:23: warning: character constant too long for its type
+../Timer.c:126:10: warning: character constant too long for its type
+../Timer.c:126:25: warning: character constant too long for its type
+../Timer.c:146:9: warning: character constant too long for its type
+../Timer.c:146:28: warning: multi-character character constant
+../Timer.c:153:10: warning: character constant too long for its type
+../Timer.c:159:10: warning: character constant too long for its type
+../Timer.c:159:28: warning: multi-character character constant
+../Timer.c:165:10: warning: character constant too long for its type
+../Timer.c:165:28: warning: character constant too long for its type
+../Timer.c:171:10: warning: character constant too long for its type
+../Timer.c:171:28: warning: character constant too long for its type
+Finished building: ../Timer.c
+ 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../UART.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:21: warning: unused variable 'i'
+../main.c:19: warning: unused variable 'a'
+Finished building: ../main.c
+ 
+Building target: week_7_UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART.map -mmcu=atmega32 -o "week_7_UART.elf"  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o   
+Finished building target: week_7_UART.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_7_UART.elf  "week_7_UART.hex"
+Finished building: week_7_UART.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_7_UART.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_7_UART.hex"
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: writing flash (27506 bytes):
+
+Writing | ################################################## | 100% 16.65s
+
+avrdude: 27506 bytes of flash written
+avrdude: verifying flash memory against week_7_UART.hex:
+avrdude: load data flash data from input file week_7_UART.hex:
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: input file week_7_UART.hex contains 27506 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 13.83s
+
+avrdude: verifying ...
+avrdude: 27506 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+15:22:57 Build Finished (took 34s.387ms)
+

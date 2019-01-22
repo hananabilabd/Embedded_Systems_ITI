@@ -1,0 +1,40 @@
+14:21:32 **** Incremental Build of configuration Debug for project week_8_I2C_EEPROM ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_8_I2C_EEPROM.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_8_I2C_EEPROM.hex"
+avrdude: input file week_8_I2C_EEPROM.hex auto detected as Intel Hex
+avrdude: writing flash (27876 bytes):
+
+Writing | ################################################## | 100% 17.59s
+
+avrdude: 27876 bytes of flash written
+avrdude: verifying flash memory against week_8_I2C_EEPROM.hex:
+avrdude: load data flash data from input file week_8_I2C_EEPROM.hex:
+avrdude: input file week_8_I2C_EEPROM.hex auto detected as Intel Hex
+avrdude: input file week_8_I2C_EEPROM.hex contains 27876 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 14.01s
+
+avrdude: verifying ...
+avrdude: 27876 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+14:22:04 Build Finished (took 32s.172ms)
+

@@ -1,0 +1,58 @@
+12:08:31 **** Incremental Build of configuration Debug for project week_9_RTOS_3 ****
+make all 
+Building file: ../RTOS_LAB2_ATMEGA32.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_LAB2_ATMEGA32.d" -MT"RTOS_LAB2_ATMEGA32.o" -c -o "RTOS_LAB2_ATMEGA32.o" "../RTOS_LAB2_ATMEGA32.c"
+In file included from ../RTOS_LAB2_ATMEGA32.c:20:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../RTOS_LAB2_ATMEGA32.c: In function 'main':
+../RTOS_LAB2_ATMEGA32.c:48: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness
+Finished building: ../RTOS_LAB2_ATMEGA32.c
+ 
+Building target: week_9_RTOS_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_3.map -mmcu=atmega32 -o "week_9_RTOS_3.elf"  ./RTOS_LAB2_ATMEGA32.o ./croutine.o ./heap_1.o ./lcd_4bit.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_3.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_3.elf  "week_9_RTOS_3.hex"
+Finished building: week_9_RTOS_3.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_3.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_3.hex"
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: writing flash (15226 bytes):
+
+Writing | ################################################## | 100% 9.57s
+
+avrdude: 15226 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_3.hex:
+avrdude: load data flash data from input file week_9_RTOS_3.hex:
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_3.hex contains 15226 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 7.69s
+
+avrdude: verifying ...
+avrdude: 15226 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+12:08:49 Build Finished (took 18s.100ms)
+

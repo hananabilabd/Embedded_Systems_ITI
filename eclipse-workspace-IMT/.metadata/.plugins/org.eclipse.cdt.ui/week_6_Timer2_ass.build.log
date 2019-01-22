@@ -1,0 +1,129 @@
+13:07:44 **** Incremental Build of configuration Debug for project week_6_Timer2_ass ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+../ADC.c: In function '__vector_16':
+../ADC.c:110: warning: implicit declaration of function 'LCD_WriteString'
+../ADC.c:111: warning: implicit declaration of function 'LCD_SetPosition'
+../ADC.c:113: warning: implicit declaration of function 'LCD_Write_Float'
+../ADC.c:106: warning: unused variable 'n'
+Finished building: ../ADC.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../Interrupt.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Interrupt.d" -MT"Interrupt.o" -c -o "Interrupt.o" "../Interrupt.c"
+In file included from ../Interrupt.c:11:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Interrupt.c: In function '__vector_1':
+../Interrupt.c:53: warning: implicit declaration of function 'DIO_SetPinValue'
+Finished building: ../Interrupt.c
+ 
+Building file: ../Keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Keypad.d" -MT"Keypad.o" -c -o "Keypad.o" "../Keypad.c"
+In file included from ../Keypad.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Keypad.c
+ 
+Building file: ../Servo.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Servo.d" -MT"Servo.o" -c -o "Servo.o" "../Servo.c"
+In file included from ../Servo.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Servo.c: In function 'Servo_Init':
+../Servo.c:23: warning: large integer implicitly truncated to unsigned type
+../Servo.c: In function 'Servo_WriteAngle':
+../Servo.c:33: warning: unused variable 'x'
+Finished building: ../Servo.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c:17:6: warning: character constant too long for its type
+../Timer.c:17:21: warning: character constant too long for its type
+../Timer.c:20:8: warning: character constant too long for its type
+../Timer.c:20:23: warning: character constant too long for its type
+../Timer.c:23:6: warning: character constant too long for its type
+../Timer.c:23:21: warning: character constant too long for its type
+../Timer.c:24: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:25: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:38:8: warning: character constant too long for its type
+../Timer.c:38:23: warning: character constant too long for its type
+../Timer.c:45:10: warning: character constant too long for its type
+../Timer.c:45:25: warning: character constant too long for its type
+../Timer.c:51:10: warning: character constant too long for its type
+../Timer.c:51:25: warning: character constant too long for its type
+../Timer.c:64:20: warning: multi-character character constant
+../Timer.c:77:21: warning: multi-character character constant
+../Timer.c:81:21: warning: character constant too long for its type
+../Timer.c:87:21: warning: character constant too long for its type
+../Timer.c:97:8: warning: character constant too long for its type
+../Timer.c:97:23: warning: character constant too long for its type
+../Timer.c:102:10: warning: character constant too long for its type
+../Timer.c:102:25: warning: character constant too long for its type
+../Timer.c:122:21: warning: multi-character character constant
+../Timer.c:135:21: warning: multi-character character constant
+../Timer.c:141:21: warning: character constant too long for its type
+../Timer.c:147:21: warning: character constant too long for its type
+Finished building: ../Timer.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: week_6_Timer2_ass.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_6_Timer2_ass.map -mmcu=atmega32 -o "week_6_Timer2_ass.elf"  ./ADC.o ./DIO.o ./Interrupt.o ./Keypad.o ./LCD.o ./Servo.o ./Timer.o ./main.o   
+Finished building target: week_6_Timer2_ass.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_6_Timer2_ass.elf  "week_6_Timer2_ass.hex"
+Finished building: week_6_Timer2_ass.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_6_Timer2_ass.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_6_Timer2_ass.hex"
+avrdude: input file week_6_Timer2_ass.hex auto detected as Intel Hex
+avrdude: writing flash (28686 bytes):
+
+Writing | ################################################## | 100% 18.49s
+
+avrdude: 28686 bytes of flash written
+avrdude: verifying flash memory against week_6_Timer2_ass.hex:
+avrdude: load data flash data from input file week_6_Timer2_ass.hex:
+avrdude: input file week_6_Timer2_ass.hex auto detected as Intel Hex
+avrdude: input file week_6_Timer2_ass.hex contains 28686 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 14.44s
+
+avrdude: verifying ...
+avrdude: 28686 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+13:08:19 Build Finished (took 34s.514ms)
+

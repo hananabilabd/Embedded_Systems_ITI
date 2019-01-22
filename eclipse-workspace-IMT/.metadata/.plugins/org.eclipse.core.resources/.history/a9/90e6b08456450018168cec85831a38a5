@@ -1,0 +1,25 @@
+F_CPU 12000000UL
+#include <util/delay.h>
+#include "registers.h"
+#include "std_types.h"
+#include "DIO.h"
+#include "LCD.h"
+#include "KeyPad.h"
+#include "I2c.h"
+#include "eeprom.h"
+
+u8 x,v;
+int main(void)
+{
+	LCD_init();
+	EEpromInit();
+	EEpromWriteByte(1,50);
+	x =EEpromReadByte(1);
+	//LCD_setposition(0,0);
+	LCD_writedata(x);
+
+	while (1)
+	{
+
+	}
+}

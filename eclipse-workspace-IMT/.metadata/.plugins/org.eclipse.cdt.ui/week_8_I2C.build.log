@@ -1,0 +1,75 @@
+17:48:18 **** Incremental Build of configuration Debug for project week_8_I2C ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_Write_Special':
+../LCD.c:126: warning: left-hand operand of comma expression has no effect
+../LCD.c:140: warning: left-hand operand of comma expression has no effect
+Finished building: ../LCD.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c:24:6: warning: character constant too long for its type
+../Timer.c:24:21: warning: character constant too long for its type
+../Timer.c:27:8: warning: character constant too long for its type
+../Timer.c:27:23: warning: character constant too long for its type
+../Timer.c:30:6: warning: character constant too long for its type
+../Timer.c:30:21: warning: character constant too long for its type
+../Timer.c:33:8: warning: character constant too long for its type
+../Timer.c:33:23: warning: character constant too long for its type
+../Timer.c:45:8: warning: character constant too long for its type
+../Timer.c:45:23: warning: character constant too long for its type
+../Timer.c:52:10: warning: character constant too long for its type
+../Timer.c:52:25: warning: character constant too long for its type
+../Timer.c:58:10: warning: character constant too long for its type
+../Timer.c:58:25: warning: character constant too long for its type
+../Timer.c:71:8: warning: character constant too long for its type
+../Timer.c:71:27: warning: multi-character character constant
+../Timer.c:78:10: warning: character constant too long for its type
+../Timer.c:84:10: warning: character constant too long for its type
+../Timer.c:84:28: warning: multi-character character constant
+../Timer.c:88:10: warning: character constant too long for its type
+../Timer.c:88:28: warning: character constant too long for its type
+../Timer.c:106:8: warning: character constant too long for its type
+../Timer.c:106:23: warning: character constant too long for its type
+../Timer.c:112:10: warning: character constant too long for its type
+../Timer.c:112:25: warning: character constant too long for its type
+../Timer.c:117:10: warning: character constant too long for its type
+../Timer.c:117:25: warning: character constant too long for its type
+../Timer.c:154:30: warning: character constant too long for its type
+../Timer.c:154:44: warning: character constant too long for its type
+../Timer.c:172:9: warning: character constant too long for its type
+../Timer.c:172:28: warning: multi-character character constant
+../Timer.c:179:10: warning: character constant too long for its type
+../Timer.c:185:10: warning: character constant too long for its type
+../Timer.c:185:28: warning: multi-character character constant
+../Timer.c:191:10: warning: character constant too long for its type
+../Timer.c:191:28: warning: character constant too long for its type
+Finished building: ../Timer.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: week_8_I2C.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_8_I2C.map -mmcu=atmega32 -o "week_8_I2C.elf"  ./DIO.o ./I2C.o ./LCD.o ./Timer.o ./main.o   
+./main.o: In function `main':
+../main.c:50: undefined reference to `SPI_INIT'
+../main.c:55: undefined reference to `SPI_Transceiver'
+make: *** [week_8_I2C.elf] Error 1
+
+17:48:20 Build Finished (took 1s.334ms)
+

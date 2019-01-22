@@ -1,0 +1,113 @@
+15:26:45 **** Incremental Build of configuration Debug for project week_7_UART_piano2test ****
+make all 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c:24:6: warning: character constant too long for its type
+../Timer.c:24:21: warning: character constant too long for its type
+../Timer.c:27:8: warning: character constant too long for its type
+../Timer.c:27:23: warning: character constant too long for its type
+../Timer.c:30:6: warning: character constant too long for its type
+../Timer.c:30:21: warning: character constant too long for its type
+../Timer.c:33:8: warning: character constant too long for its type
+../Timer.c:33:23: warning: character constant too long for its type
+../Timer.c:45:8: warning: character constant too long for its type
+../Timer.c:45:23: warning: character constant too long for its type
+../Timer.c:52:10: warning: character constant too long for its type
+../Timer.c:52:25: warning: character constant too long for its type
+../Timer.c:58:10: warning: character constant too long for its type
+../Timer.c:58:25: warning: character constant too long for its type
+../Timer.c:71:8: warning: character constant too long for its type
+../Timer.c:71:27: warning: multi-character character constant
+../Timer.c:78:10: warning: character constant too long for its type
+../Timer.c:84:10: warning: character constant too long for its type
+../Timer.c:84:28: warning: multi-character character constant
+../Timer.c:88:10: warning: character constant too long for its type
+../Timer.c:88:28: warning: character constant too long for its type
+../Timer.c:106:8: warning: character constant too long for its type
+../Timer.c:106:23: warning: character constant too long for its type
+../Timer.c:112:10: warning: character constant too long for its type
+../Timer.c:112:25: warning: character constant too long for its type
+../Timer.c:117:10: warning: character constant too long for its type
+../Timer.c:117:25: warning: character constant too long for its type
+../Timer.c:154:30: warning: character constant too long for its type
+../Timer.c:154:44: warning: character constant too long for its type
+../Timer.c:172:9: warning: character constant too long for its type
+../Timer.c:172:28: warning: multi-character character constant
+../Timer.c:179:10: warning: character constant too long for its type
+../Timer.c:185:10: warning: character constant too long for its type
+../Timer.c:185:28: warning: multi-character character constant
+../Timer.c:191:10: warning: character constant too long for its type
+../Timer.c:191:28: warning: character constant too long for its type
+Finished building: ../Timer.c
+ 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../UART.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:23: warning: unused variable 'i'
+../main.c:21: warning: unused variable 'a'
+../main.c:20: warning: unused variable 'arr'
+Finished building: ../main.c
+ 
+Building target: week_7_UART_piano2test.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART_piano2test.map -mmcu=atmega32 -o "week_7_UART_piano2test.elf"  ./DIO.o ./Timer.o ./UART.o ./main.o   
+Finished building target: week_7_UART_piano2test.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_7_UART_piano2test.elf  "week_7_UART_piano2test.hex"
+Finished building: week_7_UART_piano2test.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_7_UART_piano2test.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_7_UART_piano2test.hex"
+avrdude: input file week_7_UART_piano2test.hex auto detected as Intel Hex
+avrdude: writing flash (9486 bytes):
+
+Writing | ################################################## | 100% 5.89s
+
+avrdude: 9486 bytes of flash written
+avrdude: verifying flash memory against week_7_UART_piano2test.hex:
+avrdude: load data flash data from input file week_7_UART_piano2test.hex:
+avrdude: input file week_7_UART_piano2test.hex auto detected as Intel Hex
+avrdude: input file week_7_UART_piano2test.hex contains 9486 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 4.79s
+
+avrdude: verifying ...
+avrdude: 9486 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+
+15:26:57 Build Finished (took 11s.951ms)
+
