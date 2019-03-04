@@ -23,21 +23,17 @@ void LCD_voidInitialize(void){
 	DIO_u8SetPinDirection(LCD_RS,DIO_U8_OUTPUT);
 	DIO_u8SetPinDirection(LCD_RW,DIO_U8_OUTPUT);
 	DIO_u8SetPinDirection(LCD_E,DIO_U8_OUTPUT);
-
-	delay_ms_arm(40);
-	//delay2(40);
+	//delay_ms_arm(40);
+	delay_ms(40);
 	LCD_voidWriteCommand(0b00111000);
-	//delay_ms(1);
-	delay_ms_arm(1);
-	//delay2(1);
+	delay_ms(1);
+	//delay_ms_arm(1);
 	LCD_voidWriteCommand(0b00001100);
-	//delay_ms(1);
-	delay_ms_arm(1);
-	//delay2(1);
+	//delay_ms_arm(1);
+	delay_ms(1);
 	LCD_voidWriteCommand(0b00000001);
-	//delay_ms(2);
-	delay_ms_arm(2);
-	//delay2(2);
+	//delay_ms_arm(2);
+	delay_ms(2);
 }
 void LCD_voidClearScreen(void){
 	LCD_voidWriteCommand(0b00000001);

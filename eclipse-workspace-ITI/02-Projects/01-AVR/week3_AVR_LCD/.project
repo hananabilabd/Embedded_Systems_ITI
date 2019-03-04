@@ -24,4 +24,21 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 		<nature>de.innot.avreclipse.core.avrnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>01-DIO</name>
+			<type>2</type>
+			<location>F:/ITI/Embedded_Systems_Labs/eclipse-workspace-ITI/01-COTS/01-MCAL/01-AVR/01-DIO</location>
+		</link>
+		<link>
+			<name>04-LIB</name>
+			<type>2</type>
+			<location>F:/ITI/Embedded_Systems_Labs/eclipse-workspace-ITI/01-COTS/04-LIB</location>
+		</link>
+		<link>
+			<name>05-LCD</name>
+			<type>2</type>
+			<location>F:/ITI/Embedded_Systems_Labs/eclipse-workspace-ITI/01-COTS/02-HAL/05-LCD</location>
+		</link>
+	</linkedResources>
 </projectDescription>
