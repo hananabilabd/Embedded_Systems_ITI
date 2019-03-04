@@ -13,4 +13,6 @@ void LCD_voidWriteCommand(u8 Copy_u8Write);
 void LCD_voidWriteData(u8 Copy_u8Data);
 void LCD_voidClearScreen(void);
 
+#define AVR 0
+#define ARM 1
 #endif /* LCD_INTERFACE_H_ */

@@ -33,6 +33,8 @@ int main(void)
 	LCD_voidWriteData('a');
 
 
+	/*DIO_u8SetPinDirection(DIO_U8_PIN_A8,DIO_U8_HIGH);
+	DIO_u8SetPinValue(DIO_U8_PIN_A8,DIO_U8_HIGH);*/
 	while(1)
 	{
 

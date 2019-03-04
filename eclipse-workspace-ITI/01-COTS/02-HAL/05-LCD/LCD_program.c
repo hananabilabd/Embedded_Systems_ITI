@@ -23,17 +23,29 @@ void LCD_voidInitialize(void){
 	DIO_u8SetPinDirection(LCD_RS,DIO_U8_OUTPUT);
 	DIO_u8SetPinDirection(LCD_RW,DIO_U8_OUTPUT);
 	DIO_u8SetPinDirection(LCD_E,DIO_U8_OUTPUT);
-	//delay_ms_arm(40);
-	delay_ms(40);
+	#if MICROCONTROLLER == ARM
+		delay_ms_arm(40);
+	#elif MICROCONTROLLER == AVR
+		delay_ms(40);
+	#endif
 	LCD_voidWriteCommand(0b00111000);
-	delay_ms(1);
-	//delay_ms_arm(1);
+	#if MICROCONTROLLER == ARM
+		delay_ms_arm(1);
+	#elif MICROCONTROLLER == AVR
+		delay_ms(1);
+	#endif
 	LCD_voidWriteCommand(0b00001100);
-	//delay_ms_arm(1);
-	delay_ms(1);
+	#if MICROCONTROLLER == ARM
+		delay_ms_arm(1);
+	#elif MICROCONTROLLER == AVR
+		delay_ms(1);
+	#endif
 	LCD_voidWriteCommand(0b00000001);
-	//delay_ms_arm(2);
-	delay_ms(2);
+	#if MICROCONTROLLER == ARM
+		delay_ms_arm(2);
+	#elif MICROCONTROLLER == AVR
+		delay_ms(2);
+	#endif
 }
 void LCD_voidClearScreen(void){
 	LCD_voidWriteCommand(0b00000001);
@@ -53,6 +65,10 @@ static void LCD_voidWrite(u8 Copy_u8Write){
 				DIO_u8SetPinValue(LCD_Au8DataPins[i],get_bit(Copy_u8Write,i));
 			}
 			DIO_u8SetPinValue(LCD_E ,DIO_U8_HIGH);
-			delay_ms_arm(2);
+			#if MICROCONTROLLER == ARM
+						delay_ms_arm(1);
+			#elif MICROCONTROLLER == AVR
+						delay_ms(1);
+			#endif
 			DIO_u8SetPinValue(LCD_E ,DIO_U8_LOW);
 }

@@ -8,11 +8,12 @@
 #ifndef LCD_CONFIG_H_
 #define LCD_CONFIG_H_
 
-#define LCD_RS DIO_U8_PIN_D0
-#define LCD_RW DIO_U8_PIN_D1
-#define LCD_E  DIO_U8_PIN_D2
-
 #define LCD_DATA_PINS_NB 8
+#define LCD_RS DIO_U8_PIN_A8
+#define LCD_RW DIO_U8_PIN_A9
+#define LCD_E  DIO_U8_PIN_A10
+
+#define MICROCONTROLLER ARM
 
 u8 LCD_Au8DataPins[LCD_DATA_PINS_NB] =
 {
