@@ -1,0 +1,141 @@
+
+Oscilliscope.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000e0  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .stab         000001bc  00000000  00000000  00000134  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  2 .stabstr      0000033d  00000000  00000000  000002f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   8:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+   c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  10:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  14:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  18:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  1c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  20:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  24:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  28:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  2c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  30:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  34:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  38:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  3c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  40:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  44:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  48:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  4c:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+  50:	0c 94 34 00 	jmp	0x68	; 0x68 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d8 e0       	ldi	r29, 0x08	; 8
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+  60:	0e 94 5b 00 	call	0xb6	; 0xb6 <main>
+  64:	0c 94 6e 00 	jmp	0xdc	; 0xdc <_exit>
+
+00000068 <__bad_interrupt>:
+  68:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000006c <delay>:
+		u8 BIT6:1;
+		u8 BIT7:1;
+	}BitAccess;
+	u8 ByteAccess;
+}Register;
+void delay(unsigned short int value){
+  6c:	df 93       	push	r29
+  6e:	cf 93       	push	r28
+  70:	00 d0       	rcall	.+0      	; 0x72 <delay+0x6>
+  72:	00 d0       	rcall	.+0      	; 0x74 <delay+0x8>
+  74:	00 d0       	rcall	.+0      	; 0x76 <delay+0xa>
+  76:	cd b7       	in	r28, 0x3d	; 61
+  78:	de b7       	in	r29, 0x3e	; 62
+  7a:	9e 83       	std	Y+6, r25	; 0x06
+  7c:	8d 83       	std	Y+5, r24	; 0x05
+	unsigned short int count ,i;
+	for (i=0 ; i< value-1 ; i++){
+  7e:	1a 82       	std	Y+2, r1	; 0x02
+  80:	19 82       	std	Y+1, r1	; 0x01
+  82:	06 c0       	rjmp	.+12     	; 0x90 <delay+0x24>
+		asm("NOP");
+  84:	00 00       	nop
+	}BitAccess;
+	u8 ByteAccess;
+}Register;
+void delay(unsigned short int value){
+	unsigned short int count ,i;
+	for (i=0 ; i< value-1 ; i++){
+  86:	89 81       	ldd	r24, Y+1	; 0x01
+  88:	9a 81       	ldd	r25, Y+2	; 0x02
+  8a:	01 96       	adiw	r24, 0x01	; 1
+  8c:	9a 83       	std	Y+2, r25	; 0x02
+  8e:	89 83       	std	Y+1, r24	; 0x01
+  90:	8d 81       	ldd	r24, Y+5	; 0x05
+  92:	9e 81       	ldd	r25, Y+6	; 0x06
+  94:	9c 01       	movw	r18, r24
+  96:	21 50       	subi	r18, 0x01	; 1
+  98:	30 40       	sbci	r19, 0x00	; 0
+  9a:	89 81       	ldd	r24, Y+1	; 0x01
+  9c:	9a 81       	ldd	r25, Y+2	; 0x02
+  9e:	82 17       	cp	r24, r18
+  a0:	93 07       	cpc	r25, r19
+  a2:	80 f3       	brcs	.-32     	; 0x84 <delay+0x18>
+		asm("NOP");
+	}
+}
+  a4:	26 96       	adiw	r28, 0x06	; 6
+  a6:	0f b6       	in	r0, 0x3f	; 63
+  a8:	f8 94       	cli
+  aa:	de bf       	out	0x3e, r29	; 62
+  ac:	0f be       	out	0x3f, r0	; 63
+  ae:	cd bf       	out	0x3d, r28	; 61
+  b0:	cf 91       	pop	r28
+  b2:	df 91       	pop	r29
+  b4:	08 95       	ret
+
+000000b6 <main>:
+int main (void){
+  b6:	df 93       	push	r29
+  b8:	cf 93       	push	r28
+  ba:	cd b7       	in	r28, 0x3d	; 61
+  bc:	de b7       	in	r29, 0x3e	; 62
+
+	//((Register*) 0x31)->BitAccess.BIT0= 0x01;
+	/* PORTD bit 0 =1 to be HIGH*/
+	//*((u8*) 0x32 ) = 0x01;
+	while(1){
+	*((unsigned short int *) 0x32)= 1;
+  be:	e2 e3       	ldi	r30, 0x32	; 50
+  c0:	f0 e0       	ldi	r31, 0x00	; 0
+  c2:	81 e0       	ldi	r24, 0x01	; 1
+  c4:	90 e0       	ldi	r25, 0x00	; 0
+  c6:	91 83       	std	Z+1, r25	; 0x01
+  c8:	80 83       	st	Z, r24
+	delay(10);
+  ca:	8a e0       	ldi	r24, 0x0A	; 10
+  cc:	90 e0       	ldi	r25, 0x00	; 0
+  ce:	0e 94 36 00 	call	0x6c	; 0x6c <delay>
+	*((unsigned short int *) 0x32) = 0;
+  d2:	e2 e3       	ldi	r30, 0x32	; 50
+  d4:	f0 e0       	ldi	r31, 0x00	; 0
+  d6:	11 82       	std	Z+1, r1	; 0x01
+  d8:	10 82       	st	Z, r1
+  da:	f1 cf       	rjmp	.-30     	; 0xbe <main+0x8>
+
+000000dc <_exit>:
+  dc:	f8 94       	cli
+
+000000de <__stop_program>:
+  de:	ff cf       	rjmp	.-2      	; 0xde <__stop_program>

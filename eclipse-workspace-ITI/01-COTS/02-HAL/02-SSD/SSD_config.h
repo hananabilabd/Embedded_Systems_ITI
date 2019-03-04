@@ -1,0 +1,25 @@
+/*
+ * SSD_config.h
+ *
+ *  Created on: Feb 13, 2019
+ *      Author: Hanna Nabil
+ */
+
+#ifndef SSD_CONFIG_H_
+#define SSD_CONFIG_H_
+
+
+#define SSD_U8_NB (u8)4
+#define SDD_U8_AVAILABLE_VALUES 10
+#define SDD_U8_AVAILABLE_DASHES 8
+u8 SSD_Au8SSDtype[SSD_U8_NB]={
+		 SSD_U8_COMMON_ANODE,SSD_U8_COMMON_ANODE,SSD_U8_COMMON_ANODE,SSD_U8_COMMON_ANODE
+};
+u8 SSD_Au8SSDport[SSD_U8_NB]={
+		DIO_U8_PORT3,DIO_U8_PORT3,DIO_U8_PORT3,DIO_U8_PORT3
+};
+u8 SSD_Au8SSDpin[SSD_U8_NB]={
+		 DIO_U8_PIN_C1,DIO_U8_PIN_C2,DIO_U8_PIN_C3,DIO_U8_PIN_C4
+};
+
+#endif /* SSD_CONFIG_H_ */

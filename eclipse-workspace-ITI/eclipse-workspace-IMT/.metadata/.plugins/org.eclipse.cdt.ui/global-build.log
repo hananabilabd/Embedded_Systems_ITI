@@ -1,0 +1,1766 @@
+13:50:57 **** Clean-only build of configuration Debug for project week_9_RTOS_1 ****
+make clean 
+rm -rf  week_8_I2C_EEPROM_Assignmnent.hex  ./DIO.o ./EEPROM.o ./I2C.o ./Keypad.o ./LCD.o ./main.o  avrdudedummy  ./DIO.d ./EEPROM.d ./I2C.d ./Keypad.d ./LCD.d ./main.d  week_8_I2C_EEPROM_Assignmnent.elf
+ 
+13:51:00 **** Clean-only build of configuration Debug for project week_9_RTOS_1 ****
+make clean 
+rm -rf  week_8_I2C_EEPROM_Assignmnent.hex  ./DIO.o ./EEPROM.o ./I2C.o ./Keypad.o ./LCD.o ./main.o  avrdudedummy  ./DIO.d ./EEPROM.d ./I2C.d ./Keypad.d ./LCD.d ./main.d  week_8_I2C_EEPROM_Assignmnent.elf
+ 
+
+**** Build of configuration Debug for project week_9_RTOS_1 ****
+
+Nothing to build for project week_9_RTOS_1
+14:18:56 **** Clean-only build of configuration Debug for project week_9_RTOS_1 ****
+make clean 
+rm -rf  week_8_I2C_EEPROM_Assignmnent.hex  ./DIO.o ./EEPROM.o ./I2C.o ./Keypad.o ./LCD.o ./main.o  avrdudedummy  ./DIO.d ./EEPROM.d ./I2C.d ./Keypad.d ./LCD.d ./main.d  week_8_I2C_EEPROM_Assignmnent.elf
+ 
+14:18:56 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+../port.c:79: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'portPRESCALE_1024'
+../port.c:88: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+../port.c: In function 'prvSetupTimerInterrupt':
+../port.c:412: error: 'portPRESCALE_64' undeclared (first use in this function)
+../port.c:412: error: (Each undeclared identifier is reported only once
+../port.c:412: error: for each function it appears in.)
+make: *** [port.o] Error 1
+14:21:05 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+../port.c: In function 'prvSetupTimerInterrupt':
+../port.c:412: error: 'portPRESCALE_1024' undeclared (first use in this function)
+../port.c:412: error: (Each undeclared identifier is reported only once
+../port.c:412: error: for each function it appears in.)
+make: *** [port.o] Error 1
+14:25:14 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+../RTOS_test_EX1.c: In function 'Blink_200ms_task':
+../RTOS_test_EX1.c:23: warning: implicit declaration of function 'set_bit'
+../RTOS_test_EX1.c: In function 'Blink_1000ms_task':
+../RTOS_test_EX1.c:37: warning: implicit declaration of function 'clr_bit'
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+./RTOS_test_EX1.o: In function `Blink_200ms_task':
+../RTOS_test_EX1.c:23: undefined reference to `set_bit'
+../RTOS_test_EX1.c:23: undefined reference to `clr_bit'
+make: *** [week_9_RTOS_1.elf] Error 1
+14:26:05 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+../RTOS_test_EX1.c: In function 'Blink_200ms_task':
+../RTOS_test_EX1.c:23: warning: implicit declaration of function 'set_bit'
+../RTOS_test_EX1.c: In function 'Blink_1000ms_task':
+../RTOS_test_EX1.c:37: warning: implicit declaration of function 'clr_bit'
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+./RTOS_test_EX1.o: In function `Blink_200ms_task':
+../RTOS_test_EX1.c:23: undefined reference to `set_bit'
+../RTOS_test_EX1.c:23: undefined reference to `clr_bit'
+make: *** [week_9_RTOS_1.elf] Error 1
+14:26:19 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+./RTOS_test_EX1.o: In function `Blink_200ms_task':
+../RTOS_test_EX1.c:23: undefined reference to `set_bit'
+../RTOS_test_EX1.c:23: undefined reference to `clr_bit'
+make: *** [week_9_RTOS_1.elf] Error 1
+14:26:40 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10020 bytes):
+
+Writing | ################################################## | 100% 6.23s
+
+avrdude: 10020 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10020 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10020 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:27:00 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10020 bytes):
+
+Writing | ################################################## | 100% 6.45s
+
+avrdude: 10020 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10020 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10020 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:34:09 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.32s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:35:50 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+../RTOS_test_EX1.c: In function 'Blink_1000ms_task':
+../RTOS_test_EX1.c:40: error: expected ';' before '}' token
+make: *** [RTOS_test_EX1.o] Error 1
+14:36:03 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.42s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:44:07 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.16s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:44:23 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.20s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.05s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:46:54 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+../port.c: In function 'prvSetupTimerInterrupt':
+../port.c:395: warning: division by zero
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10110 bytes):
+
+Writing | ################################################## | 100% 6.31s
+
+avrdude: 10110 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10110 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.10s
+
+avrdude: verifying ...
+avrdude: 10110 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:47:25 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+../port.c: In function 'prvSetupTimerInterrupt':
+../port.c:395: warning: division by zero
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10110 bytes):
+
+Writing | ################################################## | 100% 6.31s
+
+avrdude: 10110 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10110 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.10s
+
+avrdude: verifying ...
+avrdude: 10110 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+14:49:43 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_1.map -mmcu=atmega32 -o "week_9_RTOS_1.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_1.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_1.elf  "week_9_RTOS_1.hex"
+Finished building: week_9_RTOS_1.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.20s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+12:16:49 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+12:16:56 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+12:17:05 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+12:17:54 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.80s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.56s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+12:18:31 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+12:18:50 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_1.hex"
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: writing flash (10022 bytes):
+
+Writing | ################################################## | 100% 6.76s
+
+avrdude: 10022 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_1.hex:
+avrdude: load data flash data from input file week_9_RTOS_1.hex:
+avrdude: input file week_9_RTOS_1.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_1.hex contains 10022 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.48s
+
+avrdude: verifying ...
+avrdude: 10022 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+12:19:12 **** Incremental Build of configuration Debug for project week_9_RTOS_1 ****
+make all 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: error: programm enable: target doesn't answer. 1 
+avrdude: initialization failed, rc=-1
+         Double check connections and try again, or use -F to override
+         this check.
+
+
+avrdude done.  Thank you.
+
+make: *** [avrdudedummy] Error 1
+11:21:36 **** Clean-only build of configuration Debug for project week_9_RTOS_2 ****
+make clean 
+rm -rf  week_9_RTOS_1.hex  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o  avrdudedummy  ./RTOS_test_EX1.d ./croutine.d ./heap_1.d ./list.d ./port.d ./queue.d ./tasks.d ./timers.d  week_9_RTOS_1.elf
+ 
+11:21:37 **** Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10040 bytes):
+
+Writing | ################################################## | 100% 6.34s
+
+avrdude: 10040 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10040 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10040 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:22:40 **** Incremental Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10040 bytes):
+
+Writing | ################################################## | 100% 6.41s
+
+avrdude: 10040 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10040 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.07s
+
+avrdude: verifying ...
+avrdude: 10040 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:23:14 **** Incremental Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10040 bytes):
+
+Writing | ################################################## | 100% 6.32s
+
+avrdude: 10040 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10040 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.07s
+
+avrdude: verifying ...
+avrdude: 10040 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:24:57 **** Incremental Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10040 bytes):
+
+Writing | ################################################## | 100% 6.22s
+
+avrdude: 10040 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10040 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.06s
+
+avrdude: verifying ...
+avrdude: 10040 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+11:31:04 **** Incremental Build of configuration Debug for project week_9_RTOS_2 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_2.map -mmcu=atmega32 -o "week_9_RTOS_2.elf"  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_2.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_2.elf  "week_9_RTOS_2.hex"
+Finished building: week_9_RTOS_2.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_2.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_2.hex"
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: writing flash (10216 bytes):
+
+Writing | ################################################## | 100% 6.21s
+
+avrdude: 10216 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_2.hex:
+avrdude: load data flash data from input file week_9_RTOS_2.hex:
+avrdude: input file week_9_RTOS_2.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_2.hex contains 10216 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 5.16s
+
+avrdude: verifying ...
+avrdude: 10216 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+12:00:48 **** Clean-only build of configuration Debug for project week_9_RTOS_3 ****
+make clean 
+rm -rf  week_9_RTOS_2.hex  ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o  avrdudedummy  ./RTOS_test_EX1.d ./croutine.d ./heap_1.d ./list.d ./port.d ./queue.d ./tasks.d ./timers.d  week_9_RTOS_2.elf
+ 
+12:00:48 **** Build of configuration Debug for project week_9_RTOS_3 ****
+make all 
+Building file: ../RTOS_LAB2_ATMEGA32.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_LAB2_ATMEGA32.d" -MT"RTOS_LAB2_ATMEGA32.o" -c -o "RTOS_LAB2_ATMEGA32.o" "../RTOS_LAB2_ATMEGA32.c"
+In file included from ../RTOS_LAB2_ATMEGA32.c:20:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../RTOS_LAB2_ATMEGA32.c: In function 'main':
+../RTOS_LAB2_ATMEGA32.c:48: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness
+Finished building: ../RTOS_LAB2_ATMEGA32.c
+ 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../lcd_4bit.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"lcd_4bit.d" -MT"lcd_4bit.o" -c -o "lcd_4bit.o" "../lcd_4bit.c"
+In file included from ../lcd_4bit.c:10:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lcd_4bit.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+../port.c: In function 'prvSetupTimerInterrupt':
+../port.c:412: error: 'portPRESCALE_64' undeclared (first use in this function)
+../port.c:412: error: (Each undeclared identifier is reported only once
+../port.c:412: error: for each function it appears in.)
+make: *** [port.o] Error 1
+12:01:17 **** Incremental Build of configuration Debug for project week_9_RTOS_3 ****
+make all 
+Building file: ../RTOS_test_EX1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_test_EX1.d" -MT"RTOS_test_EX1.o" -c -o "RTOS_test_EX1.o" "../RTOS_test_EX1.c"
+Finished building: ../RTOS_test_EX1.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_3.map -mmcu=atmega32 -o "week_9_RTOS_3.elf"  ./RTOS_LAB2_ATMEGA32.o ./RTOS_test_EX1.o ./croutine.o ./heap_1.o ./lcd_4bit.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+./RTOS_test_EX1.o: In function `Blink_200ms_task':
+../RTOS_test_EX1.c:15: multiple definition of `main'
+./RTOS_LAB2_ATMEGA32.o:../RTOS_LAB2_ATMEGA32.c:29: first defined here
+make: *** [week_9_RTOS_3.elf] Error 1
+12:03:08 **** Incremental Build of configuration Debug for project week_9_RTOS_3 ****
+make all 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: week_9_RTOS_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_3.map -mmcu=atmega32 -o "week_9_RTOS_3.elf"  ./RTOS_LAB2_ATMEGA32.o ./croutine.o ./heap_1.o ./lcd_4bit.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_3.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_3.elf  "week_9_RTOS_3.hex"
+Finished building: week_9_RTOS_3.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_3.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_3.hex"
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: writing flash (15226 bytes):
+
+Writing | ################################################## | 100% 9.71s
+
+avrdude: 15226 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_3.hex:
+avrdude: load data flash data from input file week_9_RTOS_3.hex:
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_3.hex contains 15226 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 7.67s
+
+avrdude: verifying ...
+avrdude: 15226 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+12:08:31 **** Incremental Build of configuration Debug for project week_9_RTOS_3 ****
+make all 
+Building file: ../RTOS_LAB2_ATMEGA32.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"RTOS_LAB2_ATMEGA32.d" -MT"RTOS_LAB2_ATMEGA32.o" -c -o "RTOS_LAB2_ATMEGA32.o" "../RTOS_LAB2_ATMEGA32.c"
+In file included from ../RTOS_LAB2_ATMEGA32.c:20:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../RTOS_LAB2_ATMEGA32.c: In function 'main':
+../RTOS_LAB2_ATMEGA32.c:48: warning: pointer targets in passing argument 2 of 'xTaskGenericCreate' differ in signedness
+Finished building: ../RTOS_LAB2_ATMEGA32.c
+ 
+Building target: week_9_RTOS_3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_9_RTOS_3.map -mmcu=atmega32 -o "week_9_RTOS_3.elf"  ./RTOS_LAB2_ATMEGA32.o ./croutine.o ./heap_1.o ./lcd_4bit.o ./list.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: week_9_RTOS_3.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_9_RTOS_3.elf  "week_9_RTOS_3.hex"
+Finished building: week_9_RTOS_3.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_3.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_9_RTOS_3.hex"
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: writing flash (15226 bytes):
+
+Writing | ################################################## | 100% 9.57s
+
+avrdude: 15226 bytes of flash written
+avrdude: verifying flash memory against week_9_RTOS_3.hex:
+avrdude: load data flash data from input file week_9_RTOS_3.hex:
+avrdude: input file week_9_RTOS_3.hex auto detected as Intel Hex
+avrdude: input file week_9_RTOS_3.hex contains 15226 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 7.69s
+
+avrdude: verifying ...
+avrdude: 15226 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+15:11:27 **** Build of configuration Debug for project week_7_UART ****
+make all 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../UART.c: In function 'UART_ReceiveData':
+../UART.c:45: warning: implicit declaration of function 'SET_BIT'
+Finished building: ../UART.c
+ 
+Building target: week_7_UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART.map -mmcu=atmega32 -o "week_7_UART.elf"  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o   
+./UART.o: In function `UART_INIT':
+../UART.c:26: undefined reference to `SET_BIT'
+make: *** [week_7_UART.elf] Error 1
+15:13:01 **** Incremental Build of configuration Debug for project week_7_UART ****
+make all 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../UART.c: In function 'UART_ReceiveData':
+../UART.c:45: warning: implicit declaration of function 'SET_BIT'
+Finished building: ../UART.c
+ 
+Building target: week_7_UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART.map -mmcu=atmega32 -o "week_7_UART.elf"  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o   
+./UART.o: In function `UART_INIT':
+../UART.c:26: undefined reference to `SET_BIT'
+make: *** [week_7_UART.elf] Error 1
+15:13:23 **** Incremental Build of configuration Debug for project week_7_UART ****
+make all 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../UART.c
+ 
+Building target: week_7_UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART.map -mmcu=atmega32 -o "week_7_UART.elf"  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o   
+Finished building target: week_7_UART.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_7_UART.elf  "week_7_UART.hex"
+Finished building: week_7_UART.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_7_UART.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_7_UART.hex"
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: writing flash (27506 bytes):
+
+Writing | ################################################## | 100% 17.20s
+
+avrdude: 27506 bytes of flash written
+avrdude: verifying flash memory against week_7_UART.hex:
+avrdude: load data flash data from input file week_7_UART.hex:
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: input file week_7_UART.hex contains 27506 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 13.83s
+
+avrdude: verifying ...
+avrdude: 27506 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+15:22:19 **** Clean-only build of configuration Debug for project week_7_UART ****
+make clean 
+rm -rf  week_7_UART.hex  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o  avrdudedummy  ./ADC.d ./DIO.d ./LCD.d ./Timer.d ./UART.d ./main.d  week_7_UART.elf
+ 
+15:22:22 **** Incremental Build of configuration Debug for project week_7_UART ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+../ADC.c: In function '__vector_16':
+../ADC.c:112: warning: implicit declaration of function 'LCD_WriteString'
+../ADC.c:113: warning: implicit declaration of function 'LCD_SetPosition'
+../ADC.c:115: warning: implicit declaration of function 'LCD_Write_Float'
+../ADC.c:108: warning: unused variable 'n'
+Finished building: ../ADC.c
+ 
+Building file: ../DIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"DIO.d" -MT"DIO.o" -c -o "DIO.o" "../DIO.c"
+Finished building: ../DIO.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../LCD.c: In function 'LCD_Write_Special':
+../LCD.c:126: warning: left-hand operand of comma expression has no effect
+../LCD.c:140: warning: left-hand operand of comma expression has no effect
+Finished building: ../LCD.c
+ 
+Building file: ../Timer.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"Timer.d" -MT"Timer.o" -c -o "Timer.o" "../Timer.c"
+../Timer.c:21:6: warning: character constant too long for its type
+../Timer.c:21:21: warning: character constant too long for its type
+../Timer.c:24:8: warning: character constant too long for its type
+../Timer.c:24:23: warning: character constant too long for its type
+../Timer.c:27:6: warning: character constant too long for its type
+../Timer.c:27:21: warning: character constant too long for its type
+../Timer.c:28: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:29: warning: '__INTR_ATTRS' attribute directive ignored
+../Timer.c:42:8: warning: character constant too long for its type
+../Timer.c:42:23: warning: character constant too long for its type
+../Timer.c:49:10: warning: character constant too long for its type
+../Timer.c:49:25: warning: character constant too long for its type
+../Timer.c:55:10: warning: character constant too long for its type
+../Timer.c:55:25: warning: character constant too long for its type
+../Timer.c:68:8: warning: character constant too long for its type
+../Timer.c:68:27: warning: multi-character character constant
+../Timer.c:75:10: warning: character constant too long for its type
+../Timer.c:81:10: warning: character constant too long for its type
+../Timer.c:81:28: warning: multi-character character constant
+../Timer.c:85:10: warning: character constant too long for its type
+../Timer.c:85:28: warning: character constant too long for its type
+../Timer.c:91:10: warning: character constant too long for its type
+../Timer.c:91:28: warning: character constant too long for its type
+../Timer.c:121:8: warning: character constant too long for its type
+../Timer.c:121:23: warning: character constant too long for its type
+../Timer.c:126:10: warning: character constant too long for its type
+../Timer.c:126:25: warning: character constant too long for its type
+../Timer.c:146:9: warning: character constant too long for its type
+../Timer.c:146:28: warning: multi-character character constant
+../Timer.c:153:10: warning: character constant too long for its type
+../Timer.c:159:10: warning: character constant too long for its type
+../Timer.c:159:28: warning: multi-character character constant
+../Timer.c:165:10: warning: character constant too long for its type
+../Timer.c:165:28: warning: character constant too long for its type
+../Timer.c:171:10: warning: character constant too long for its type
+../Timer.c:171:28: warning: character constant too long for its type
+Finished building: ../Timer.c
+ 
+Building file: ../UART.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"UART.d" -MT"UART.o" -c -o "UART.o" "../UART.c"
+In file included from ../UART.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../UART.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c: In function 'main':
+../main.c:21: warning: unused variable 'i'
+../main.c:19: warning: unused variable 'a'
+Finished building: ../main.c
+ 
+Building target: week_7_UART.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,week_7_UART.map -mmcu=atmega32 -o "week_7_UART.elf"  ./ADC.o ./DIO.o ./LCD.o ./Timer.o ./UART.o ./main.o   
+Finished building target: week_7_UART.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex week_7_UART.elf  "week_7_UART.hex"
+Finished building: week_7_UART.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_7_UART.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "week_7_UART.hex"
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: writing flash (27506 bytes):
+
+Writing | ################################################## | 100% 16.65s
+
+avrdude: 27506 bytes of flash written
+avrdude: verifying flash memory against week_7_UART.hex:
+avrdude: load data flash data from input file week_7_UART.hex:
+avrdude: input file week_7_UART.hex auto detected as Intel Hex
+avrdude: input file week_7_UART.hex contains 27506 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 13.83s
+
+avrdude: verifying ...
+avrdude: 27506 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
+20:01:40 **** Build of configuration Debug for project Atmega32_SPI ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: Atmega32_SPI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Atmega32_SPI.map -mmcu=atmega32 -o "Atmega32_SPI.elf"  ./DIO.o ./SPI.o ./UART.o ./main.o   
+Finished building target: Atmega32_SPI.elf
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Atmega32_SPI.elf  "Atmega32_SPI.hex"
+Finished building: Atmega32_SPI.hex
+ 
+Invoking: AVRDude
+C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:Atmega32_SPI.hex:a
+
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e9502
+avrdude: NOTE: FLASH memory has been specified, an erase cycle will be performed
+         To disable this feature, specify the -D option.
+avrdude: erasing chip
+avrdude: warning: cannot set sck period. please check for usbasp firmware update.
+avrdude: reading input file "Atmega32_SPI.hex"
+avrdude: input file Atmega32_SPI.hex auto detected as Intel Hex
+avrdude: writing flash (5822 bytes):
+
+Writing | ################################################## | 100% 3.53s
+
+avrdude: 5822 bytes of flash written
+avrdude: verifying flash memory against Atmega32_SPI.hex:
+avrdude: load data flash data from input file Atmega32_SPI.hex:
+avrdude: input file Atmega32_SPI.hex auto detected as Intel Hex
+avrdude: input file Atmega32_SPI.hex contains 5822 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.94s
+
+avrdude: verifying ...
+avrdude: 5822 bytes of flash verified
+
+avrdude done.  Thank you.
+
+Finished building: avrdudedummy
+ 
