@@ -13,6 +13,10 @@
 void RCC_voidInitialize(void){
 	RCC_u32_CR->ByteAccess =0x00000001;
 	RCC_u32_CFGR ->ByteAccess=0x00000000;
+
+	assign_bit(RCC_u32_APB2ENR->ByteAccess ,0 ,RCC_u8_ENABLE_CLK); // this to enable the clock on alternative function pins ==> to disable debug on them later
+	//afio_cfg_debug_ports(AFIO_DEBUG_SW_ONLY );
+	assign_nibble(AFIO_MAPR,6,0b0010);
 }
 void RCC_voidSetPeripheralClockState(u8 Copy_u8PeripheralNumber , u8 Copy_u8State){
 	switch(Copy_u8PeripheralNumber){

@@ -3,10 +3,11 @@
 #include"BIT_CALC.h"
 //MCAL includes
 #include "DIO_interface.h"
-
+#include "Keypad_config.h"
 #include "Keypad_interface.h"
 #include "Keypad_private.h"
-#include "Keypad_config.h"
+/*******************/
+#include "delay.h"
 
 u8 Keypad_u8Init(void){
 	u8 Local_u8ErrorState=0;
@@ -98,4 +99,18 @@ u8 Keypad_u8GetKeypadState(u8 Copy_Au8KeysState[KEYPAD_u8_KEYS_NB])
 		}
 #endif
 	return Local_ErrorState;
+}
+u8 Keypad_u8GetPressedKey(void){
+	u8 arr[16]={0};
+	u8 i =0;
+	Keypad_u8GetKeypadState(arr);
+	for ( i =0 ; i< 16 ; i++){
+		if (arr[i]==KEYPAD_u8_PRESSED ) {
+
+			//arr[i]=KEYPAD_u8_NOT_PRESSED;
+			delay_ms(400);
+			return i;
+		}
+	}
+	return NULL;
 }

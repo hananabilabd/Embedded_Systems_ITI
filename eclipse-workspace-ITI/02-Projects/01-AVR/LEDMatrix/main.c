@@ -33,8 +33,8 @@ u8 ball_up_2screens_out_completely[8]={128, 199, 125, 199, 128, 0, 0, 0};
 void draw(u8 arr[]){
 	u8 i ;
 	for (i=0;i<8;i++){
-		DIO_u8SetPortValue(2,255&(~(1<<i)));
-		DIO_u8SetPortValue(3,arr[i]);
+		DIO_u8SetPortValue(2,255&(~(1<<i)));//col
+		DIO_u8SetPortValue(3,arr[i]);//rows
 		delay_ms(2);
 	}
 }

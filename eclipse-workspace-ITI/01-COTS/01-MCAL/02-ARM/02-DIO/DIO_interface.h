@@ -129,7 +129,7 @@ u8 DIO_u8GetPinValue(u8 Copy_u8PinNb, u8* Copy_Pu8Value);
 u8 DIO_u8SetPinDirection(u8 Copy_u8PinNb, u8 Copy_u8Mode) ;
 u8 DIO_u8SetPortValue(u8 Copy_u8PortNb, u16 Copy_u16Value) ;
 u8 DIO_u8SetPortDirection(u8 Copy_u8PortNb ,u16 Copy_u16Value,u8 Copy_u8ModeInput,u8 Copy_u8ModeOutput);
-
+u8 DIO_u8SetArrayValue(u8 * Copy_u8APins, u16 Copy_u16Value,u8 Copy_u8ArraySize) ;
 
 
 #endif /* DIO_INTERFACE_H_ */

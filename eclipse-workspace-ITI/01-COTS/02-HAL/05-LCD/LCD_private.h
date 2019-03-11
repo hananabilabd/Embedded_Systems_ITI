@@ -8,7 +8,10 @@
 #ifndef LCD_PRIVATE_H_
 #define LCD_PRIVATE_H_
 
-
+#define LCD_4_MODE 0
+#define LCD_8_MODE 1
+#define AVR 0
+#define ARM 1
 static void LCD_voidWrite(u8 Copy_u8Write);
 
 

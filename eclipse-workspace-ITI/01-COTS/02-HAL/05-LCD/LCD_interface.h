@@ -10,9 +10,15 @@
 
 void LCD_voidInitialize(void);
 void LCD_voidWriteCommand(u8 Copy_u8Write);
-void LCD_voidWriteData(u8 Copy_u8Data);
+void LCD_voidWriteCharacter(u8 Copy_u8Data);
 void LCD_voidClearScreen(void);
+void LCD_voidWriteString(u8 *arr);
+void LCD_voidSetPosition(u8 Copy_u8Row,u8 Copy_u8Column);
+void LCD_voidWriteNumber(u64 number);
 
-#define AVR 0
-#define ARM 1
+void LCD_voidWriteSpecialInitialize(u8 * Copy_u8Array);
+
+void WriteHannaInitialize(void);
+void WriteHanna(u8 Copy_u8Row , u8 Copy_column);
+
 #endif /* LCD_INTERFACE_H_ */

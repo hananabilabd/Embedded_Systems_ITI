@@ -41,7 +41,6 @@ u8 Keypad_GetButtonSatus (u8 Button_Num)
 	DIO_SetPinValue(Keypad_port,C1,1);
 	DIO_SetPinValue(Keypad_port,C2,1);
 	DIO_SetPinValue(Keypad_port,C3,1);
-
 	// Then Throw low on the specific Pin Which in the column i want to read
 	DIO_SetPinValue(Keypad_port,Real_col[col],0);
 

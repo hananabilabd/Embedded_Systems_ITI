@@ -55,7 +55,7 @@ static u8 u8ApplySetPinValue(u8 Copy_u8PinNb,u32 *(Copy_Low_High[]) ){
  */
 u8 DIO_u8SetPortValue(u8 Copy_u8PortNb, u16 Copy_u16Value) {
 	u8 Local_u8ErrorState =0;
-	for (u8 i =0; i<8 ;i++){
+	for (u8 i =0; i<8 ;i++){ // this check not to manipulate input pins
 		if (get_nibble(*arr_CRL[Copy_u8PortNb],i) == DIO_INPUT_PULLDOWN ) {
 			assign_bit(Copy_u16Value,i,get_bit(*arr_ODR[Copy_u8PortNb],i));
 		}
@@ -69,6 +69,14 @@ u8 DIO_u8SetPortValue(u8 Copy_u8PortNb, u16 Copy_u16Value) {
 	case DIO_U8_PORTC :DIO_GPIOC->ODR.ByteAccess = Copy_u16Value;break;
 	case DIO_U8_PORTD :DIO_GPIOD->ODR.ByteAccess = Copy_u16Value;break;
 	default : Local_u8ErrorState =1;break;
+	}
+	return Local_u8ErrorState;
+}
+u8 DIO_u8SetArrayValue(u8 * Copy_u8APins, u16 Copy_u16Value,u8 Copy_u8ArraySize) {// this Function is  given array of pins
+	u8 Local_u8ErrorState =0;
+	u8 i =0;
+	for ( i =0 ; i <  Copy_u8ArraySize ; i++){
+		DIO_u8SetPinValue( Copy_u8APins[i],get_bit(Copy_u16Value,i));
 	}
 	return Local_u8ErrorState;
 }
