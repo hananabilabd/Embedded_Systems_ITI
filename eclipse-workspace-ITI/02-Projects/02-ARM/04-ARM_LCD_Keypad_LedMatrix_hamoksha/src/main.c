@@ -36,19 +36,24 @@ int main(void)
 	//DIO_u8SetPortValue(DIO_U8_PORTB,0xFFFF);
 	//DIO_u8SetPortValue(DIO_U8_PORTC,0xFFFF);
 
-	LCD_voidInitialize();
-	Keypad_u8Init();
-	LedMatrix_voidInitialize();
+	//LCD_voidInitialize();
+	//Keypad_u8Init();
+	//LedMatrix_voidInitialize();
 
 	//u8 NULL=20;
 	u8 i;
 	u8 value;
 	s8 horizontalCounter=0,VerticalCounter=0;
 	u8 LCD_hamoksha[8]={14, 10, 14, 4, 14, 4, 14, 10};
-	LCD_voidWriteSpecialInitialize(LCD_hamoksha);
+	//LCD_voidWriteSpecialInitialize(LCD_hamoksha);
 
 	while(1)
 	{
+		DIO_u8SetPinValue(DIO_U8_PIN_A6,DIO_U8_HIGH);
+		delay_ms(2000);
+		DIO_u8SetPinValue(DIO_U8_PIN_A6,DIO_U8_LOW);
+				delay_ms(2000);
+		/*
 		value=Keypad_u8GetPressedKey();
 		if (value !=NULL){
 			if (value == 2 ){
@@ -78,7 +83,7 @@ int main(void)
 		}
 
 
-
+*/
 
 	}
 	return 0;
