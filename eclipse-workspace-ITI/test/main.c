@@ -5,6 +5,7 @@
  *      Author: Hanna Nabil
  */
 #include <stdio.h>
+typedef unsigned char u8 ;
 #define correct   20
 #define incorrect 30
 int hanna[]={1,2,3,4,5};
@@ -27,11 +28,16 @@ int verify (int *arr){
 	return incorrect;
 
 }
+void blink (void){
+	printf("%d\n",2);
+}
 int main(void){
 	int x=0;
 	int bor3y[]={2,3,4,5,7};
-	x =verify (bor3y);
-	printf("%d",x );
+	void (*ptr)(void);
+	ptr=&blink;
+	//(*ptr)();
+	printf("%d",3<<4 );
 	return 0 ;
 }
 

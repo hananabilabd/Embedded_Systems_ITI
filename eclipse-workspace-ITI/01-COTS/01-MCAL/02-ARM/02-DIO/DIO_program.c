@@ -184,9 +184,9 @@ u8 DIO_u8GetPinValue(u8 Copy_u8PinNb, u8* Copy_Pu8Value){
 						*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;}
 					else {*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;}
 					}
-				else {//pull-down resistor
-					if (Local_u8IDRStatus == 0){*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;}
-					else {*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;}}
+				else {//pull-up resistor
+					if (Local_u8IDRStatus == 1){*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;}
+					else {*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;}}
 			}
 			else if (Local_u8Mode ==DIO_INPUT_FLOATING){
 					*Copy_Pu8Value=Local_u8IDRStatus;

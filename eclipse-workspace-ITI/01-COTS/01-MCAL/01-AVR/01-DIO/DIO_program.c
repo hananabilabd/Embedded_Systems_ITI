@@ -8,8 +8,8 @@
  * This file has implementation
  */
 
-#include"../../04-LIB/STD_TYPES.h"
-#include"../../04-LIB/BIT_CALC.h"
+#include"STD_TYPES.h"
+#include"BIT_CALC.h"
 #include"DIO_private.h"
 #include"DIO_interface.h"
 #include"DIO_config.h"

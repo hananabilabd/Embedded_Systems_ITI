@@ -22,5 +22,6 @@
 #define CONC_HELPER(b0,b1,b2,b3,b4,b5,b6,b7) 0b##b7##b6##b5##b4##b3##b2##b1##b0
 
 #define assign_nibble(reg,pin,value)     reg=(reg & (~(0xF << pin*4)))| (value << pin*4)
+#define assign_2bits(reg,pin,value)     reg=(reg & (~(0x3 << pin*2)))| (value << pin*2)
 #define get_nibble(reg , pin)            ((reg >> pin*4) & 0xF)
 #endif /* MACROS_H_ */

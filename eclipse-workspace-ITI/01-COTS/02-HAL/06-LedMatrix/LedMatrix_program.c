@@ -37,6 +37,11 @@ void LedMatrix_voidInitialize(void){
 		#endif
 	}
 }
+
+
+/*****
+ * this Function takes array from Led Matrix Studio , Columns , LSB at Top , Left to Right
+ */
 u8 LedMatrix_u8draw(u8 arr[]){
 	u8 i ;
 	u8 Local_u8Errorstate=0;

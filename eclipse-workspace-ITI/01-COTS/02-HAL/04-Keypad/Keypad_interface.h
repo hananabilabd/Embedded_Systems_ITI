@@ -1,7 +1,7 @@
 
 #ifndef KEYPAD_INTERFACE_H
 #define KEYPAD_INTERFACE_H
-#define NULL                              20
+#define NULL_Key                          20
 #define KEYPAD_u8_KEYS_NB		          9 // KEYPAD_u8_ROWS * KEYPAD_u8_COL
 
 #define KEYPAD_u8_NOT_PRESSED		        0

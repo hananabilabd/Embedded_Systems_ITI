@@ -8,19 +8,20 @@
 #ifndef DIO_INTERFACE_H_
 #define DIO_INTERFACE_H_
 
-#define DIO_U8_PORTA 0
-#define DIO_U8_PORTB 1
-#define DIO_U8_PORTC 2
-#define DIO_U8_PORTD 3
-#define DIO_U8_PIN_0  0
-#define DIO_U8_PIN_1  1
-#define DIO_U8_PIN_2  2
-#define DIO_U8_PIN_3  3
-#define DIO_U8_PIN_4  4
-#define DIO_U8_PIN_5  5
-#define DIO_U8_PIN_6  6
-#define DIO_U8_PIN_7  7
-#define DIO_U8_PIN_8  8
+#define DIO_U8_PORTA  0
+#define DIO_U8_PORTB  1
+#define DIO_U8_PORTC  2
+#define DIO_U8_PORTD  3
+/*
+#define DIO_U8_PIN_0   0
+#define DIO_U8_PIN_1   1
+#define DIO_U8_PIN_2   2
+#define DIO_U8_PIN_3   3
+#define DIO_U8_PIN_4   4
+#define DIO_U8_PIN_5   5
+#define DIO_U8_PIN_6   6
+#define DIO_U8_PIN_7   7
+#define DIO_U8_PIN_8   8
 #define DIO_U8_PIN_9   9
 #define DIO_U8_PIN_10  10
 #define DIO_U8_PIN_11  11
@@ -49,16 +50,16 @@
 #define DIO_U8_PIN_34  47
 #define DIO_U8_PIN_35  48
 #define DIO_U8_PIN_36  49
-
-#define DIO_U8_PIN_A0  0
-#define DIO_U8_PIN_A1  1
-#define DIO_U8_PIN_A2  2
-#define DIO_U8_PIN_A3  3
-#define DIO_U8_PIN_A4  4
-#define DIO_U8_PIN_A5  5
-#define DIO_U8_PIN_A6  6
-#define DIO_U8_PIN_A7  7
-#define DIO_U8_PIN_A8  8
+*/
+#define DIO_U8_PIN_A0   0
+#define DIO_U8_PIN_A1   1
+#define DIO_U8_PIN_A2   2
+#define DIO_U8_PIN_A3   3
+#define DIO_U8_PIN_A4   4
+#define DIO_U8_PIN_A5   5
+#define DIO_U8_PIN_A6   6
+#define DIO_U8_PIN_A7   7
+#define DIO_U8_PIN_A8   8
 #define DIO_U8_PIN_A9   9
 #define DIO_U8_PIN_A10  10
 #define DIO_U8_PIN_A11  11
@@ -66,27 +67,27 @@
 #define DIO_U8_PIN_A13  13
 #define DIO_U8_PIN_A14  14
 #define DIO_U8_PIN_A15  15
-#define DIO_U8_PIN_B0  16
-#define DIO_U8_PIN_B1  17
-#define DIO_U8_PIN_B2  18
-#define DIO_U8_PIN_B3  19
-#define DIO_U8_PIN_B4  20
-#define DIO_U8_PIN_B5  21
-#define DIO_U8_PIN_B6  22
-#define DIO_U8_PIN_B7  23
-#define DIO_U8_PIN_B8  24
-#define DIO_U8_PIN_B9  25
+#define DIO_U8_PIN_B0   16
+#define DIO_U8_PIN_B1   17
+#define DIO_U8_PIN_B2   18
+#define DIO_U8_PIN_B3   19
+#define DIO_U8_PIN_B4   20
+#define DIO_U8_PIN_B5   21
+#define DIO_U8_PIN_B6   22
+#define DIO_U8_PIN_B7   23
+#define DIO_U8_PIN_B8   24
+#define DIO_U8_PIN_B9   25
 #define DIO_U8_PIN_B10  26
 #define DIO_U8_PIN_B11  27
-#define DIO_U8_PIN_B12 28
+#define DIO_U8_PIN_B12  28
 #define DIO_U8_PIN_B13  29
 #define DIO_U8_PIN_B14  30
 #define DIO_U8_PIN_B15  31
 #define DIO_U8_PIN_C13  45
 #define DIO_U8_PIN_C14  46
 #define DIO_U8_PIN_C15  47
-#define DIO_U8_PIN_D0  48
-#define DIO_U8_PIN_D1  49
+#define DIO_U8_PIN_D0   48
+#define DIO_U8_PIN_D1   49
 
 #define DIO_U8_INPUT  0
 #define DIO_U8_OUTPUT 1

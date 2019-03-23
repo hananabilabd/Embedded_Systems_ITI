@@ -49,11 +49,10 @@ int main(void)
 
 	while(1)
 	{
-		DIO_u8SetPinValue(DIO_U8_PIN_A6,DIO_U8_HIGH);
-		delay_ms(2000);
-		DIO_u8SetPinValue(DIO_U8_PIN_A6,DIO_U8_LOW);
-				delay_ms(2000);
-		/*
+
+
+
+
 		value=Keypad_u8GetPressedKey();
 		if (value !=NULL){
 			if (value == 2 ){
@@ -82,8 +81,6 @@ int main(void)
 			LedMatrix_u8draw(hamoksha_right);
 		}
 
-
-*/
 
 	}
 	return 0;

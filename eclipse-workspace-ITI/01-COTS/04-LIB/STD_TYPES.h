@@ -18,7 +18,7 @@ typedef   float f32;
 typedef   double f64;
 typedef unsigned long long int u64;
 typedef signed long long int s64;
-
+#define NULL ((void* ) 0)
 /* comment 8 bit register */
 typedef union{
 	struct {

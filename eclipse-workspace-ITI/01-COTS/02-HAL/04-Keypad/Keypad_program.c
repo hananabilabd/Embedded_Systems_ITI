@@ -112,5 +112,5 @@ u8 Keypad_u8GetPressedKey(void){
 			return i;
 		}
 	}
-	return NULL;
+	return NULL_Key;
 }
