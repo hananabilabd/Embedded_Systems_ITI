@@ -14,8 +14,8 @@ void Interrupt_Disable(u8 Copy_u8Index);
 void Interrupt_Enable(u8 Copy_u8Index);
 void Interrupt_Initialize(void);
 void __vector_1 (void) __attribute__((signal));
-void __vector_2 (void) __attribute__((signal,__INTR_ATTRS));
-void __vector_3 (void) __attribute__((signal,__INTR_ATTRS));
+void __vector_2 (void) __attribute__((signal));
+void __vector_3 (void) __attribute__((signal));
 
 #define INTERRUPT_INT0    0
 #define INTERRUPT_INT1    1

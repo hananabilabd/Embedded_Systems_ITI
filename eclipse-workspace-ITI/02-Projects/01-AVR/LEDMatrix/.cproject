@@ -31,9 +31,9 @@
 								<option id="de.innot.avreclipse.compiler.option.debug.level.368947761" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.607882325" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.920320327" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\01-DIO&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\02-HAL\01-LED_Driver&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\02-HAL\01-LED_Driver&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\01-DIO&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.1630514475" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>

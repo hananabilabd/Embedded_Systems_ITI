@@ -30,6 +30,9 @@ void EXTI1_IRQHandler(void){
 			while(1);
 }
 */
+static u8 var1;
+static u8 var2=100;
+extern const u8 var3 =50;
 int main(void)
 {
 	RCC_voidInitialize();
@@ -56,8 +59,21 @@ int main(void)
 	NVIC_u8setPriority(NVIC_EXTI1,0,3);
 	NVIC_voidSetPendingFlag(NVIC_EXTI0);
 
+	u8 var4=70;
+	const u8 var5=60;
+	static u8 var6 =50;
 	while(1)
 	{
+		var1++;
+		var2++;
+		//var3++;
+		var4++;
+		//var5++;
+		var6++;
+		if ( (var1 == var3 ) || (var2 == var5 )|| (var4 || var6)){
+			var1 = var5;
+			var2=var3;
+		}
 	}
 	return 0;
 }

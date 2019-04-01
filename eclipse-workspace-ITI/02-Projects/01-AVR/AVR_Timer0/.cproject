@@ -31,9 +31,9 @@
 								<option id="de.innot.avreclipse.compiler.option.debug.level.1261197470" name="Generate Debugging Info" superClass="de.innot.avreclipse.compiler.option.debug.level"/>
 								<option id="de.innot.avreclipse.compiler.option.optimize.1010287205" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
 								<option id="de.innot.avreclipse.compiler.option.incpath.1413221744" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\01-AVR\01-DIO&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\01-AVR\02-Interrupt&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\01-AVR\01-DIO&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\02-HAL\05-LCD&quot;"/>
 								</option>
 								<inputType id="de.innot.avreclipse.compiler.winavr.input.1945933479" name="C Source Files" superClass="de.innot.avreclipse.compiler.winavr.input"/>
 							</tool>
@@ -57,10 +57,10 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="04-LIB|02-Interrupt|01-DIO" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="05-LCD|03-Timer|04-LIB|02-Interrupt|01-DIO" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="01-DIO"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="02-Interrupt"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="04-LIB"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="05-LCD"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -134,5 +134,13 @@
 		<scannerConfigBuildInfo instanceId="de.innot.avreclipse.configuration.app.release.2109436589;de.innot.avreclipse.configuration.app.release.2109436589.;de.innot.avreclipse.tool.compiler.winavr.app.release.1473917609;de.innot.avreclipse.compiler.winavr.input.413836209">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId="de.innot.avreclipse.core.AVRGCCManagedMakePerProjectProfileC"/>
 		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/AVR_Timer"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/AVR_Timer"/>
+		</configuration>
 	</storageModule>
 </cproject>

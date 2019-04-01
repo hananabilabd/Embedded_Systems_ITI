@@ -70,12 +70,12 @@
 									<listOptionValue builtIn="false" value="&quot;../system/include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../system/include/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../system/include/stm32f1-stdperiph&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\01-RCC&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\02-DIO&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\02-HAL\04-Keypad&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\02-HAL\05-LCD&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\03-NVIC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\03-NVIC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\02-HAL\04-Keypad&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\02-HAL\05-LCD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\02-DIO&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\02-ARM\01-RCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\04-LIB&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1785389975" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="DEBUG"/>
@@ -162,9 +162,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="01-RCC"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="02-DIO"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="03-NVIC"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="04-Keypad"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="04-LIB"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="05-LCD"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 						<entry excluding="include/cmsis|src/stm32f1-stdperiph/stm32f10x_wwdg.c|src/stm32f1-stdperiph/stm32f10x_usart.c|src/stm32f1-stdperiph/stm32f10x_tim.c|src/stm32f1-stdperiph/stm32f10x_spi.c|src/stm32f1-stdperiph/stm32f10x_sdio.c|src/stm32f1-stdperiph/stm32f10x_rtc.c|src/stm32f1-stdperiph/stm32f10x_pwr.c|src/stm32f1-stdperiph/stm32f10x_iwdg.c|src/stm32f1-stdperiph/stm32f10x_i2c.c|src/stm32f1-stdperiph/stm32f10x_fsmc.c|src/stm32f1-stdperiph/stm32f10x_flash.c|src/stm32f1-stdperiph/stm32f10x_exti.c|src/stm32f1-stdperiph/stm32f10x_dma.c|src/stm32f1-stdperiph/stm32f10x_dbgmcu.c|src/stm32f1-stdperiph/stm32f10x_dac.c|src/stm32f1-stdperiph/stm32f10x_crc.c|src/stm32f1-stdperiph/stm32f10x_cec.c|src/stm32f1-stdperiph/stm32f10x_can.c|src/stm32f1-stdperiph/stm32f10x_bkp.c|src/stm32f1-stdperiph/stm32f10x_adc.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="system"/>
 					</sourceEntries>

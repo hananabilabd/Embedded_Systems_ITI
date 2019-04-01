@@ -17,7 +17,7 @@ C_DEPS += \
 %.o: ../%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: AVR Compiler'
-	avr-gcc -I"F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\04-LIB" -I"F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\01-MCAL\01-DIO" -I"F:\ITI\Embedded_Systems_Labs\eclipse-workspace-ITI\01-COTS\02-HAL\01-LED_Driver" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	avr-gcc -I"F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\02-HAL\01-LED_Driver" -I"F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\01-MCAL\01-DIO" -I"F:\ITI\Embedded_Systems\eclipse-workspace-ITI\01-COTS\04-LIB" -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=12000000UL -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

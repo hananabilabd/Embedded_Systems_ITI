@@ -32,12 +32,14 @@ void blink (void){
 	printf("%d\n",2);
 }
 int main(void){
-	int x=0;
+	int x=10;
+	int y ;
+	y=x++++1;
 	int bor3y[]={2,3,4,5,7};
 	void (*ptr)(void);
 	ptr=&blink;
 	//(*ptr)();
-	printf("%d",3<<4 );
+	printf("%d",y );
 	return 0 ;
 }
 

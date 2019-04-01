@@ -22,11 +22,8 @@ int main(void)
 
 	LCD_voidInitialize();
 
-	LCD_voidWriteData('H');
-	LCD_voidWriteData('a');
-	LCD_voidWriteData('n');
-	LCD_voidWriteData('n');
-	LCD_voidWriteData('a');
+	LCD_voidWriteCharacter('H');
+
 
 
 	while(1)
