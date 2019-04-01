@@ -12,14 +12,14 @@
 #define F_CPU 12000000UL
 //#include <util/delay.h>
 #include "DIO_private.h"
-#include "danger.h"
+//#include "danger.h"
 #include "help.h"
 #include "hungry.h"
 #include "LCD_interface.h"
 #include"delay.h"
 u16 counter = 0;
  u32 i=0;
- u8 flag1=0,flag2=0,flag3=0;
+ u8 flag1=1,flag2=0,flag3=0;
 void __vector_11 (void) __attribute__((signal));
 void __vector_10 (void) __attribute__((signal));
 void __vector_11 (void)//normal mode
@@ -28,12 +28,12 @@ void __vector_11 (void)//normal mode
 	counter ++;
 	if (counter  ==2){
 			counter =0;
-			TCNT0=140;
+			TCNT0=137;
 
 				//toggle_bit(var,0);
 				//DIO_u8SetPinValue(DIO_U8_PIN_C0,var);
 			if (flag1 == 1){
-				asm("LPM %0,Z" "\n\t" : "=r" (DIO_U8_PORTD->ByteAccess): "z" (&danger_raw[i]));
+				asm("LPM %0,Z" "\n\t" : "=r" (DIO_U8_PORTD->ByteAccess): "z" (&hannon_raw[i]));
 									i++;
 									if ( i == 4086){
 										i =0;
@@ -72,7 +72,7 @@ void __vector_10 (void)//ocr interrupt
 
 int main(void){
 
-	TCNT0=140;
+	TCNT0=137;
 	TIMSK |= 0x01;
 	SREG |= 0x80;
 	TCCR0 = 0b00000010;
