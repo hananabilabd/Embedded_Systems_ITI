@@ -94,4 +94,91 @@ void LCD_voidWriteString(u8 *arr){// same as arr[]
 	}
 
 }
+void LCD_voidSetPosition(u8 Copy_u8Row,u8 Copy_u8Column){
+	if (Copy_u8Column <=39 && Copy_u8Row <3){ // Capacity
+	if (Copy_u8Row==0){
+		LCD_voidWriteCommand(Copy_u8Column | 0x80); // as in LCD Datasheet page 16 Set DDRAM address begin with 0b1
+	}
+	else if  (Copy_u8Row==1){
+		LCD_voidWriteCommand((64+Copy_u8Column) | 0x80);
+	}
+	}
+}
+void LCD_voidWriteNumber(u64 number){
+	u64 reversed =1;
+	u8 temp =0;
+	if (number ==0){ //
+		LCD_voidWriteCharacter('0');
+	}
+	while (number != 0){
+		temp =number %10 ; //to get unit
+		number =number /10; //to get tenth
+		reversed=reversed *10 +temp; //construct the number in reversed  order
+	}
+	while (reversed != 1){
+		temp =reversed %10 ; // get unit
+		reversed =reversed /10; // get tenth
+		LCD_voidWriteCharacter(temp +48);// because of the ask code
+	}
+}
+void WriteHannaInitialize(void){ // this function will draw hanna in arabic ==> on CGRAM
+	LCD_voidWriteCommand(0b01000000);// command to be transfered to CGRAM
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00001000);
+			LCD_voidWriteCharacter(0b00010100);
+			LCD_voidWriteCharacter(0b00000010);
+			LCD_voidWriteCharacter(0b00011111);
+			//el7arf el tane
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00011111);
+			// 3rd
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00010010);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00010000);
+			LCD_voidWriteCharacter(0b00011111);
+			/**********************************************************/
+			//draw heart
+			LCD_voidWriteCharacter(0b00000000);
+			LCD_voidWriteCharacter(0b00001010);
+			LCD_voidWriteCharacter(0b00010101);
+			LCD_voidWriteCharacter(0b00010001);
+			LCD_voidWriteCharacter(0b00010001);
+			LCD_voidWriteCharacter(0b00001010);
+			LCD_voidWriteCharacter(0b00000100);
+			LCD_voidWriteCharacter(0b00000000);
+			///////// set to DDRAM
+			LCD_voidSetPosition(0,0);
+			/******************************************************************************/
+}
+void LCD_voidWriteSpecialInitialize(u8 * Copy_u8Array){ // this function will draw hanna in arabic ==> on CGRAM
+	u8 i =0;
+	LCD_voidWriteCommand(0b01000000);// command to be transfered to CGRAM
+	for (i =0 ; i <8 ; i++){
+		LCD_voidWriteCharacter(Copy_u8Array[i]);
+	}
+	///////// set to DDRAM
+	LCD_voidSetPosition(0,0);
+	/******************************************************************************/
+}
+void WriteHanna(u8 Copy_u8Row , u8 Copy_column){ // for writing in arabic
+	LCD_voidSetPosition(Copy_u8Row,Copy_column);
+	LCD_voidWriteCharacter(3);
+	LCD_voidWriteCharacter(2);
+	LCD_voidWriteCharacter(1);
+	LCD_voidWriteCharacter(0);
+	LCD_voidWriteCharacter(3);
 
+}
