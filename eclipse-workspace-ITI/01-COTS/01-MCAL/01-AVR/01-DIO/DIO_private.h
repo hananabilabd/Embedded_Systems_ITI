@@ -48,6 +48,7 @@
 #define TCCR1B    *( (volatile u8*) 0x4E  )
 #define TCNT1H    *( (volatile u8*) 0x4D  )
 #define TCNT1L    *( (volatile u8*) 0x4C  )
+#define TCNT1    *( (volatile u16*) 0x4C  )
 
 #define OCR1BH    *( (volatile u8*) 0x49  )
 #define OCR1BL    *( (volatile u8*) 0x48  )

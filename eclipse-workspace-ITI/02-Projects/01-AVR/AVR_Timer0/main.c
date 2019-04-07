@@ -19,7 +19,7 @@
 #include"delay.h"
 u16 counter = 0;
  u32 i=0;
- u8 flag1=0,flag2=0,flag3=0;
+ u8 flag1=1,flag2=0,flag3=0;
 void __vector_11 (void) __attribute__((signal));
 void __vector_10 (void) __attribute__((signal));
 void __vector_11 (void)//normal mode

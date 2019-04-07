@@ -1,0 +1,75 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 14, 2019
+ *      Author: Hanna Nabil
+ */
+#include "STD_TYPES.h"
+#include"BIT_CALC.h"
+#include"DIO_interface.h"
+//#include"DIO_config.h"
+//#include"Interrupt_interface.h"
+#define F_CPU 12000000UL
+//#include <util/delay.h>
+#include "DIO_private.h"
+#include "song4k.h"
+
+//#include "LCD_interface.h"
+//#include"delay.h"
+u16 counter = 0;
+ u32 i=0;
+void __vector_11 (void)//normal mode
+{
+
+	counter ++;
+	if (counter  ==2){
+			counter =0;
+			TCNT0=137;
+
+				//toggle_bit(var,0);
+				//DIO_u8SetPinValue(DIO_U8_PIN_C0,var);
+
+				asm("LPM %0,Z" "\n\t" : "=r" (DIO_U8_PORTD->ByteAccess): "z" (&hannon_raw[i]));
+									i++;
+									if ( i == 23869){
+										i =0;
+									}
+
+
+
+		}
+}
+/*
+void __vector_10 (void)//ocr interrupt
+{
+
+
+
+		asm("LPM %0,Z" "\n\t" : "=r" (DIO_U8_PORTD->ByteAccess): "z" (&hannon_raw[i]));
+		i++;
+		if ( i == 23869 ){
+			i =0;
+		}
+
+}*/
+
+
+int main(void){
+
+	TCNT0=137;
+	TIMSK |= 0x01;
+	SREG |= 0x80;
+	TCCR0 = 0b00000010;
+	//TCCR0 = 0b00001011;//fast PWM
+	//OCR0=187;// for 8k sampling
+	//OCR0=255;// for 4k sampling
+	DIO_u8SetPortDirection(DIO_U8_PORT_D,0xFF);
+	DIO_u8SetPortDirection(DIO_U8_PORT_C,0xFF);
+
+
+while(1){
+DIO_u8SetPortValue(DIO_U8_PORT_D,0xff);
+
+}
+return 0 ;
+}
