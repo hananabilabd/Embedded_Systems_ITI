@@ -1,0 +1,29 @@
+/*
+ * SW-ICU_config.h
+ *
+ *  Created on: Apr 7, 2019
+ *      Author: Hanna Nabil
+ */
+
+#ifndef SW_ICU_CONFIG_H_
+#define SW_ICU_CONFIG_H_
+
+#define SW_ICU_EXTI0_SELECTED_TIMER                 SW_ICU_INDEX_TIMER1
+#define SW_ICU_EXTI1_SELECTED_TIMER                 SW_ICU_INDEX_TIMER0
+#define SW_ICU_EXTI2_SELECTED_TIMER                 SW_ICU_INDEX_TIMER2
+
+/*
+ you can choose from these prescalers
+SW_ICU_TIMER_PRESCALER_1
+SW_ICU_TIMER_PRESCALER_8
+SW_ICU_TIMER_PRESCALER_64
+SW_ICU_TIMER_PRESCALER_256
+SW_ICU_TIMER_PRESCALER_1024
+
+ */
+#define SW_ICU_EXTI0_SELECTED_TIMER_PRESCALER                  SW_ICU_TIMER_PRESCALER_8
+#define SW_ICU_EXTI1_SELECTED_TIMER_PRESCALER                  SW_ICU_TIMER_PRESCALER_8
+#define SW_ICU_EXTI2_SELECTED_TIMER_PRESCALER                  SW_ICU_TIMER_PRESCALER_8
+
+
+#endif /* SW_ICU_CONFIG_H_ */

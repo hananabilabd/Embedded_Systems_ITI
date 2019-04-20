@@ -121,6 +121,46 @@ void LCD_voidWriteNumber(u64 number){
 		LCD_voidWriteCharacter(temp +48);// because of the ask code
 	}
 }
+void LCD_voidWriteFloat(f64 realValue){
+
+	int intValue = (int)realValue;
+	u64 number = intValue;
+	double diffValue = realValue - (double)intValue;
+	int anotherIntValue = (int)(diffValue * 1000.0);
+	u64 reversed =1;
+	u8 temp =0;
+	if (number ==0){ //
+		LCD_voidWriteCharacter('0');
+	}
+	while (number != 0){
+		temp =number % 10 ; //to get unit
+		number =number /10; //to get tenth
+		reversed=reversed *10 +temp; //construct the number in reversed  order
+	}
+	while (reversed != 1){
+		temp =reversed % 10 ; // get unit
+		reversed =reversed /10; // get tenth
+		LCD_voidWriteCharacter(temp +48);// because of the ask code
+	}
+	LCD_voidWriteCharacter('.');
+	// second integer (integer after floating point)
+	u64 reversed2 =1;
+	u8 temp2 =0;
+	if (anotherIntValue ==0){ //
+			LCD_voidWriteCharacter('0');
+		}
+		while (anotherIntValue != 0){
+			temp2 =anotherIntValue % 10 ; //to get unit
+			anotherIntValue =anotherIntValue /10; //to get tenth
+			reversed2 = reversed2 *10 +temp2; //construct the number in reversed  order
+		}
+		while (reversed2 != 1){
+			temp2 =reversed2 % 10 ; // get unit
+			reversed2 =reversed2 /10; // get tenth
+			LCD_voidWriteCharacter(temp2 +48);// because of the ask code
+		}
+}
+/*
 void WriteHannaInitialize(void){ // this function will draw hanna in arabic ==> on CGRAM
 	LCD_voidWriteCommand(0b01000000);// command to be transfered to CGRAM
 			LCD_voidWriteCharacter(0b00000000);
@@ -149,7 +189,7 @@ void WriteHannaInitialize(void){ // this function will draw hanna in arabic ==> 
 			LCD_voidWriteCharacter(0b00010000);
 			LCD_voidWriteCharacter(0b00010000);
 			LCD_voidWriteCharacter(0b00011111);
-			/**********************************************************/
+			//////////////////////////////////////////////////////////////////
 			//draw heart
 			LCD_voidWriteCharacter(0b00000000);
 			LCD_voidWriteCharacter(0b00001010);
@@ -161,7 +201,7 @@ void WriteHannaInitialize(void){ // this function will draw hanna in arabic ==> 
 			LCD_voidWriteCharacter(0b00000000);
 			///////// set to DDRAM
 			LCD_voidSetPosition(0,0);
-			/******************************************************************************/
+			//////////////////////////////////////////////////////////////////
 }
 void LCD_voidWriteSpecialInitialize(u8 * Copy_u8Array){ // this function will draw hanna in arabic ==> on CGRAM
 	u8 i =0;
@@ -171,7 +211,6 @@ void LCD_voidWriteSpecialInitialize(u8 * Copy_u8Array){ // this function will dr
 	}
 	///////// set to DDRAM
 	LCD_voidSetPosition(0,0);
-	/******************************************************************************/
 }
 void WriteHanna(u8 Copy_u8Row , u8 Copy_column){ // for writing in arabic
 	LCD_voidSetPosition(Copy_u8Row,Copy_column);
@@ -182,3 +221,4 @@ void WriteHanna(u8 Copy_u8Row , u8 Copy_column){ // for writing in arabic
 	LCD_voidWriteCharacter(3);
 
 }
+*/

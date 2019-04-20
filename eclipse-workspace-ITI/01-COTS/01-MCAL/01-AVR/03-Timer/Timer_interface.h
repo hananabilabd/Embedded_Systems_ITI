@@ -8,15 +8,15 @@
 #ifndef TIMER_INTERFACE_H_
 #define TIMER_INTERFACE_H_
 
-#define TIMER_PRESCALER_1     0b001
-#define TIMER_PRESCALER_8     0b010
-#define TIMER_PRESCALER_64    0b011
-#define TIMER_PRESCALER_256   0b100
-#define TIMER_PRESCALER_1024  0b101
+#define TIMER_PRESCALER_1                              0b001
+#define TIMER_PRESCALER_8                              0b010
+#define TIMER_PRESCALER_64                             0b011
+#define TIMER_PRESCALER_256                            0b100
+#define TIMER_PRESCALER_1024                           0b101
 
-#define TIMER_INDEX_TIMER0    0
-#define TIMER_INDEX_TIMER1    1
-#define TIMER_INDEX_TIMER2    2
+#define TIMER_INDEX_TIMER0                             0
+#define TIMER_INDEX_TIMER1                             1
+#define TIMER_INDEX_TIMER2                             2
 
 #define TIMER_CALLBACK_TIMER2_COMPARE                  0
 #define TIMER_CALLBACK_TIMER2_OVERFLOW                 1
@@ -71,9 +71,36 @@
 #define TIMER_OC_PIN_MODE_TIMER0_OC2_CLEAR                        0x20
 #define TIMER_OC_PIN_MODE_TIMER0_OC2_SET                          0x30
 
-#define TIMER_DISABLED    0b000
-#define TIMER_ICU_RISING_EDGE     1
-#define TIMER_ICU_FALLING_EDGE    0
+#define TIMER_DISABLED                                            0b000
+#define TIMER_ICU_RISING_EDGE                                      1
+#define TIMER_ICU_FALLING_EDGE                                     0
+
+void ICU_voidInitialize(void);
+void ICU_voidEnable(void);
+void ICU_voidDisable(void);
+void ICU_voidGetPeriod(u16 *Copy_u8ICU_period);
+void ICU_voidGetDuty(u16 *Copy_u8ICU_duty);
+void ICU_voidGetFrequency(u16 *Copy_u8ICU_Frequency);
+void ICU_voidGetOnTime(u16 *Copy_u8ICU_OnTime);
+void ICU_voidGetOffTime(u16 *Copy_u8ICU_OffTime);
+
 u8 Timer_u8prescaler(u8 Copy_u8TimerIndex,u8 Copy_u8Prescaler);
+void Timer_voidIntialize(void);
+void Timer_voidSetMode(u8 Copy_u8TimerIndex,u8 Copy_u8Mode);
+void Timer_voidSetOCPinMode(u8 Copy_u8TimerIndex, u8 Copy_u8OC_PinMode);
+u8  Timer_voidEnableTimer(u8 Copy_u8TimerIndex);
+void Timer_voidDisableTimer(u8 Copy_u8TimerIndex);
+void  Timer_voidGetPrescaler(u8 Copy_u8TimerIndex,u16 *Copy_u8TimerPrescaler);
+void Timer_voidSetPrescaler(u8 Copy_u8TimerIndex,u8 Copy_u8Prescaler);
+void Timer_voidSetCallback(u8 Copy_u8TimerCallbackMode,void (*Copy_ptr)(void));
+
+void __vector_4 (void) __attribute__((signal));
+void __vector_5 (void) __attribute__((signal));
+void __vector_6 (void) __attribute__((signal));
+void __vector_7 (void) __attribute__((signal));
+void __vector_8 (void) __attribute__((signal));
+void __vector_9 (void) __attribute__((signal));
+void __vector_10 (void) __attribute__((signal));
+void __vector_11 (void) __attribute__((signal));
 
 #endif /* TIMER_INTERFACE_H_ */

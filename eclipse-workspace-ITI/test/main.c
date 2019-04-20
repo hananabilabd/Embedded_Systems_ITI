@@ -6,6 +6,7 @@
  */
 #include <stdio.h>
 typedef unsigned char u8 ;
+typedef unsigned long int  u32;
 #define correct   20
 #define incorrect 30
 int hanna[]={1,2,3,4,5};
@@ -32,14 +33,18 @@ void blink (void){
 	printf("%d\n",2);
 }
 int main(void){
-	int x=10;
-	int y ;
-	y=x++++1;
+	int  time ;
+	/*
 	int bor3y[]={2,3,4,5,7};
 	void (*ptr)(void);
 	ptr=&blink;
 	//(*ptr)();
 	printf("%d",y );
+	*/
+
+	//f[0].x={0,1,2};
+	time =( 255 * ((float)8/12));
+	printf("%d",time );
 	return 0 ;
 }
 

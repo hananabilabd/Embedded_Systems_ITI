@@ -163,12 +163,12 @@ u8 DIO_u8GetPinValue(u8 Copy_u8PinNb, u8* Copy_Pu8Value){
 			}
 		}
 		else {
-			Local_u8ActualPinNb = Local_u8ActualPinNb -8;
+			u8 temp = Local_u8ActualPinNb -8;
 			switch(Local_u8ActualPortNb){
-			case DIO_U8_PORTA  : Local_u8Mode=get_nibble(DIO_GPIOA->CRH.ByteAccess,Local_u8ActualPinNb);break;
-			case DIO_U8_PORTB  : Local_u8Mode=get_nibble(DIO_GPIOB->CRH.ByteAccess,Local_u8ActualPinNb);break;
-			case DIO_U8_PORTC  : Local_u8Mode=get_nibble(DIO_GPIOC->CRH.ByteAccess,Local_u8ActualPinNb);break;
-			case DIO_U8_PORTD  : Local_u8Mode=get_nibble(DIO_GPIOD->CRH.ByteAccess,Local_u8ActualPinNb);break;
+			case DIO_U8_PORTA  : Local_u8Mode=get_nibble(DIO_GPIOA->CRH.ByteAccess,temp);break;
+			case DIO_U8_PORTB  : Local_u8Mode=get_nibble(DIO_GPIOB->CRH.ByteAccess,temp);break;
+			case DIO_U8_PORTC  : Local_u8Mode=get_nibble(DIO_GPIOC->CRH.ByteAccess,temp);break;
+			case DIO_U8_PORTD  : Local_u8Mode=get_nibble(DIO_GPIOD->CRH.ByteAccess,temp);break;
 			}
 		}
 		// to check if it was pull-up and pull-down
@@ -180,11 +180,18 @@ u8 DIO_u8GetPinValue(u8 Copy_u8PinNb, u8* Copy_Pu8Value){
 				case DIO_U8_PORTD  : Local_u8GetPullStatus=get_bit(DIO_GPIOD->ODR.ByteAccess,Local_u8ActualPinNb);break;
 				}
 				if (Local_u8GetPullStatus ==0){//pull-down resistor
-					if (Local_u8IDRStatus == 0){
-						*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;}
-					else {*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;}
+
+					if (Local_u8IDRStatus == 0)
+					{
+						*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;
+					}
+					else
+					{
+						*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;
+					}
 					}
 				else {//pull-up resistor
+
 					if (Local_u8IDRStatus == 1){*Copy_Pu8Value=DIO_U8_BUTTON_RELEASED;}
 					else {*Copy_Pu8Value=DIO_U8_BUTTON_PRESSED;}}
 			}

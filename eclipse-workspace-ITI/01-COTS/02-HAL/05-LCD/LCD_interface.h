@@ -17,7 +17,7 @@ void LCD_voidSetPosition(u8 Copy_u8Row,u8 Copy_u8Column);
 void LCD_voidWriteNumber(u64 number);
 
 void LCD_voidWriteSpecialInitialize(u8 * Copy_u8Array);
-
+void LCD_voidWriteFloat(f64 realValue);
 void WriteHannaInitialize(void);
 void WriteHanna(u8 Copy_u8Row , u8 Copy_column);
 

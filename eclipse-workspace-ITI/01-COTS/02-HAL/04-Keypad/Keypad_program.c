@@ -101,14 +101,14 @@ u8 Keypad_u8GetKeypadState(u8 Copy_Au8KeysState[KEYPAD_u8_KEYS_NB])
 	return Local_ErrorState;
 }
 u8 Keypad_u8GetPressedKey(void){
-	u8 arr[16]={0};
+	u8 arr[KEYPAD_u8_KEYS_NB];
 	u8 i =0;
 	Keypad_u8GetKeypadState(arr);
-	for ( i =0 ; i< 16 ; i++){
+	for ( i =0 ; i< KEYPAD_u8_KEYS_NB ; i++){
 		if (arr[i]==KEYPAD_u8_PRESSED ) {
 
 			//arr[i]=KEYPAD_u8_NOT_PRESSED;
-			delay_ms(400);
+			delay_ms(500);
 			return i;
 		}
 	}

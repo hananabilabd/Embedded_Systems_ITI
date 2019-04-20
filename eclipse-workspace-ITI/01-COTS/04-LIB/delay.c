@@ -8,8 +8,7 @@ void delay_ms(u32 value){
 }
 
 void delay_us(u32 value){
-	u32 v =((value/3) -40);
-		for (u32 i =0 ; i< v ;i++){
+		for (u32 i =0 ; i< value*12 ;i++){
 			asm("NOP");
 		}
 }

@@ -8,6 +8,7 @@
 #ifndef TIMER_CONFIG_H_
 #define TIMER_CONFIG_H_
 
+#define TIMER_CLOCK_FREQUENCY       12
 
 
 

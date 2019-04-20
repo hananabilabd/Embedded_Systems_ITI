@@ -11,9 +11,9 @@
 #define LCD_BIT_MODE LCD_4_MODE
 #define LCD_DATA_PINS_NB 4
 
-#define LCD_RS        DIO_U8_PIN_C5
-#define LCD_RW        DIO_U8_PIN_C6
-#define LCD_E         DIO_U8_PIN_C7
+#define LCD_RS        DIO_U8_PIN_C4
+#define LCD_RW        DIO_U8_PIN_C5
+#define LCD_E         DIO_U8_PIN_C6
 /**********
  * vo will be connected with 1K resistor on the ground
  */

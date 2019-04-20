@@ -11,14 +11,6 @@
 #include"Timer_private.h"
 #include "DIO_private.h"
 #include "DIO_interface.h"
-void __vector_4 (void) __attribute__((signal));
-void __vector_5 (void) __attribute__((signal));
-void __vector_6 (void) __attribute__((signal));
-void __vector_7 (void) __attribute__((signal));
-void __vector_8 (void) __attribute__((signal));
-void __vector_9 (void) __attribute__((signal));
-void __vector_10 (void) __attribute__((signal));
-void __vector_11 (void) __attribute__((signal));
 
 /******Instruction
  * 0- Timer_Initialize
@@ -26,16 +18,25 @@ void __vector_11 (void) __attribute__((signal));
  * 2- set Mode
  * 3- Enable
  ******/
+static void ICU_voidSelectEdge(u8 Copy_u8ICU_EdgeSelect);
 static void (*PvoidCallback[8])(void)={NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL};
 static u8 Timer_Au8Prescaler[3]={TIMER_PRESCALER_UNINTIALIZED,TIMER_PRESCALER_UNINTIALIZED,TIMER_PRESCALER_UNINTIALIZED};
-
+static u16 Timer_Au8ActualPrescaler[6]={0,1,8,64,256,1024};
 static u8 Timer_Au8Timer1_TCCR1A_value[16]={0x00,0x01,0x10,0x11,0x00,0x01,0x10,0x11,0x00,0x01,0x10,0x11,0x00,0x01,0x10,0x11};
 static u8 Timer_Au8Timer1_TCCR1B_value[16]={0x00,0x00,0x00,0x00,0x08,0x08,0x08,0x08,0x10,0x10,0x10,0x10,0x18,0x18,0x18,0x18};
 static u16 Timer_u16OffTime=0,Timer_u16OnTime=0;
+static u8 Timer_u8Timer1Prescaler=0;
+static u8 Timer_ICU_u8RisingEdge=0,Timer_ICU_u8FallingEdge=0;
+
+ ///**** To use ICU you should call Timer_Initialize , then Timer_voidSetPrescaler ****
+ // this is the hardware ICU
 void ICU_voidInitialize(void){//D6
-	SREG |= 0x80; // Enable Global Interrupt
-	Timer_voidSelectEdgeICU(TIMER_ICU_RISING_EDGE);
 	DIO_u8SetPinDirection(DIO_U8_PIN_D6,DIO_U8_INPUT);
+	SREG |= 0x80; // Enable Global Interrupt
+	Timer_ICU_u8RisingEdge= 0x40|Timer_Au8Prescaler[1];
+	Timer_ICU_u8FallingEdge= Timer_Au8Prescaler[1];
+	ICU_voidSelectEdge(TIMER_ICU_RISING_EDGE);
+
 }
 void ICU_voidEnable(void){
 	TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_CAPTURE;
@@ -44,24 +45,35 @@ void ICU_voidDisable(void){
 	TIMSK &=TIMER_INTERRUPT_DISABLE_MASK_TIMER1_CAPTURE;
 }
 static void ICU_voidSelectEdge(u8 Copy_u8ICU_EdgeSelect){
-TCCR1B = (TCCR1B & 0xBF) | (Copy_u8ICU_EdgeSelect <6) ;
+	//TCCR1B = (TCCR1B & 0xBF) | (Copy_u8ICU_EdgeSelect <6) ;
+	TCCR1B=Copy_u8ICU_EdgeSelect;
+	/*
+	switch(Copy_u8ICU_EdgeSelect){
+		case TIMER_ICU_RISING_EDGE : TCCR1B |= 0x40;break;
+		case TIMER_ICU_FALLING_EDGE: TCCR1B &= 0xBF;break;
+	}*/
 
 }
-void ICU_voidGetPeriod(u8 *Copy_u8ICU_period){
-
+void ICU_voidGetPeriod(u16 *Copy_u8ICU_period){
+	*Copy_u8ICU_period=(Timer_u16OnTime +Timer_u16OffTime)*((f32)Timer_u8Timer1Prescaler/TIMER_CLOCK_FREQUENCY);
 }
-void ICU_voidGetDuty(u8 *Copy_u8ICU_duty){
-
+void ICU_voidGetDuty(u16 *Copy_u8ICU_duty){
+	*Copy_u8ICU_duty= ((f32)Timer_u16OnTime/(Timer_u16OnTime +Timer_u16OffTime) ) *100;
 }
-void ICU_voidGetFrequency(u8 *Copy_u8ICU_Frequency){
+void ICU_voidGetFrequency(u16 *Copy_u8ICU_Frequency){
 
+	*Copy_u8ICU_Frequency=((f32)TIMER_CLOCK_FREQUENCY*1000000/(Timer_u8Timer1Prescaler * (Timer_u16OnTime +Timer_u16OffTime) ) );
 }
-void ICU_voidGetOnTime(u8 *Copy_u8ICU_OnTime){
+void ICU_voidGetOnTime(u16 *Copy_u8ICU_OnTime){
+	*Copy_u8ICU_OnTime= (Timer_u16OnTime )* ((f32)Timer_u8Timer1Prescaler/TIMER_CLOCK_FREQUENCY);
+	//*Copy_u8ICU_OnTime= Timer_u16OnTime ;
+}
+void ICU_voidGetOffTime(u16 *Copy_u8ICU_OffTime){
+	*Copy_u8ICU_OffTime= (Timer_u16OffTime )* ((f32)Timer_u8Timer1Prescaler/TIMER_CLOCK_FREQUENCY);
+	//*Copy_u8ICU_OffTime= Timer_u16OffTime ;
+}
 
-}
-void ICU_voidGetOffTime(u8 *Copy_u8ICU_OffTime){
-
-}
+/*********************************************************************************************************************/
 void Timer_voidIntialize(void){
 	SREG |= 0x80; // Enable Global Interrupt
 }
@@ -114,20 +126,28 @@ void Timer_voidDisableTimer(u8 Copy_u8TimerIndex){
 		case TIMER_INDEX_TIMER2: assign_3bits(TCCR2,0,TIMER_DISABLED);break;
 		}
 }
-u8 Timer_u8prescaler(u8 Copy_u8TimerIndex,u8 Copy_u8Prescaler){
-	u8 Local_u8ErrorState=0;
+void  Timer_voidGetPrescaler(u8 Copy_u8TimerIndex,u16 *Copy_u8TimerPrescaler){
+
+	switch (Copy_u8TimerIndex){
+		case TIMER_INDEX_TIMER0: *Copy_u8TimerPrescaler=Timer_Au8ActualPrescaler[ Timer_Au8Prescaler[0]];break;
+		case TIMER_INDEX_TIMER1: *Copy_u8TimerPrescaler=Timer_Au8ActualPrescaler[ Timer_Au8Prescaler[1]];break;
+		case TIMER_INDEX_TIMER2: *Copy_u8TimerPrescaler=Timer_Au8ActualPrescaler[ Timer_Au8Prescaler[2]];break;
+		}
+}
+void Timer_voidSetPrescaler(u8 Copy_u8TimerIndex,u8 Copy_u8Prescaler){
+	//u8 Local_u8ErrorState=0;
 	switch (Copy_u8TimerIndex){
 	case TIMER_INDEX_TIMER0: assign_3bits(Timer_Au8Prescaler[0],0,Copy_u8Prescaler);break;
-	case TIMER_INDEX_TIMER1: assign_3bits(Timer_Au8Prescaler[1],0,Copy_u8Prescaler);break;
+	case TIMER_INDEX_TIMER1: assign_3bits(Timer_Au8Prescaler[1],0,Copy_u8Prescaler);Timer_u8Timer1Prescaler=Timer_Au8ActualPrescaler[ Copy_u8Prescaler];break;
 	case TIMER_INDEX_TIMER2: assign_3bits(Timer_Au8Prescaler[2],0,Copy_u8Prescaler);break;
 	}
-	return Local_u8ErrorState;
+
 }
 void Timer_voidSetCallback(u8 Copy_u8TimerCallbackMode,void (*Copy_ptr)(void)){
 	switch(Copy_u8TimerCallbackMode){
 			case TIMER_CALLBACK_TIMER2_COMPARE :TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER2_COMPARE;PvoidCallback[0] = Copy_ptr;break;
 			case TIMER_CALLBACK_TIMER2_OVERFLOW:TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER2_OVERFLOW;PvoidCallback[1] = Copy_ptr; break;
-			case TIMER_CALLBACK_TIMER1_CAPTURE :TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_CAPTURE;PvoidCallback[2] = Copy_ptr;break;
+			/*case TIMER_CALLBACK_TIMER1_CAPTURE :TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_CAPTURE;PvoidCallback[2] = Copy_ptr;break;*/
 			case TIMER_CALLBACK_TIMER1_COMPARE_A:TIMSK|= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_COMPARE_A;PvoidCallback[3] = Copy_ptr;break;
 			case TIMER_CALLBACK_TIMER1_COMPARE_B:TIMSK|= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_COMPARE_B;PvoidCallback[4] = Copy_ptr;break;
 			case TIMER_CALLBACK_TIMER1_OVERFLOW: TIMSK|= TIMER_INTERRUPT_ENABLE_MASK_TIMER1_OVERFLOW;PvoidCallback[5] = Copy_ptr;break;
@@ -149,28 +169,30 @@ void __vector_5 (void)//overflow timer1
 }
 void __vector_6 (void)//capture timer1
 {
-	if (PvoidCallback[2] !=NULL){
-				PvoidCallback[2]();
-			}
-}
-void __vector_7 (void)//compare A timer1
-{
-	static flag=0;
+	static u8 flag=0;
 	if (flag ==0){ // will be entered when Rising edge happen
 		Timer_u16OffTime=ICR1;
 		TCNT1=0;
-		ICU_voidSelectEdge(TIMER_ICU_FALLING_EDGE);
+		ICU_voidSelectEdge(Timer_ICU_u8FallingEdge);
 		flag =1;
 	}else {// will be entered when falling edge happen
 		Timer_u16OnTime=ICR1;
 		TCNT1=0;
-		ICU_voidSelectEdge(TIMER_ICU_RISING_EDGE);
+		ICU_voidSelectEdge(Timer_ICU_u8RisingEdge);
 		flag =0;
 	}
 	/*
-	if (PvoidCallback[3] !=NULL){
+	if (PvoidCallback[2] !=NULL){
 				PvoidCallback[2]();
 			}*/
+}
+void __vector_7 (void)//compare A timer1
+{
+
+
+	if (PvoidCallback[3] !=NULL){
+				PvoidCallback[2]();
+			}
 }
 void __vector_8 (void)//compare B timer1
 {

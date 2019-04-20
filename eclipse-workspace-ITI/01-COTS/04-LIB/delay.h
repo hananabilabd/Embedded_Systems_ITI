@@ -4,7 +4,6 @@
 //#include "STD_TYPES.h"
 void delay_ms(u32 value);
 void delay_us(u32 value);
-void delay_ms_arm(u32 value);
 #define AVR 0
 #define ARM 1
 #define MICROCONTROLLER AVR
