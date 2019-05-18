@@ -8,7 +8,7 @@
 #ifndef TIMER_PRIVATE_H_
 #define TIMER_PRIVATE_H_
 
-#define TIMER_PRESCALER_UNINTIALIZED                            0
+#define TIMER_PRESCALER_UNINTIALIZED                            0x00
 
 #define TIMER_INTERRUPT_ENABLE_MASK_TIMER0_OVERFLOW             0x02
 #define TIMER_INTERRUPT_ENABLE_MASK_TIMER0_COMPARE              0x01

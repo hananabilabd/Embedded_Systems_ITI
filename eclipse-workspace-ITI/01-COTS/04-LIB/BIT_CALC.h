@@ -25,4 +25,5 @@
 #define assign_3bits(reg,pin,value)     reg=(reg & (~(0x7 << pin*3)))| (value << pin*3)
 #define assign_2bits(reg,pin,value)     reg=(reg & (~(0x3 << pin*2)))| (value << pin*2)
 #define get_nibble(reg , pin)            ((reg >> pin*4) & 0xF)
+#define get_8Bits(reg , pin)             ((reg >> pin*8) & 0xFF)
 #endif /* MACROS_H_ */

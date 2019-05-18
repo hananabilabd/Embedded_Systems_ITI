@@ -55,7 +55,7 @@ week_9_RTOS_1.hex: week_9_RTOS_1.elf
 
 avrdudedummy: week_9_RTOS_1.elf
 	@echo 'Invoking: AVRDude'
-	C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp usb -Uflash:w:week_9_RTOS_1.hex:a
+	C:\WinAVR-20100110\bin\avrdude -pm32 -cusbasp -Uflash:w:week_9_RTOS_1.hex:a
 	@echo 'Finished building: $@'
 	@echo ' '
 

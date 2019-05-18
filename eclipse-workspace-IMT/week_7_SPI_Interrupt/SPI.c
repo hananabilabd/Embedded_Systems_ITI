@@ -35,5 +35,4 @@ u8 SPI_Transceiver(u8 Data){
 	SPDR =Data;
 	while (get_bit(SPSR,7)==0);
 	return SPDR;
-
 }

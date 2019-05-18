@@ -11,7 +11,7 @@
 #include"Timer_private.h"
 #include "DIO_private.h"
 #include "DIO_interface.h"
-
+//#include <avr/io.h>
 /******Instruction
  * 0- Timer_Initialize
  * 1- set pre-scaler
@@ -72,7 +72,6 @@ void ICU_voidGetOffTime(u16 *Copy_u8ICU_OffTime){
 	*Copy_u8ICU_OffTime= (Timer_u16OffTime )* ((f32)Timer_u8Timer1Prescaler/TIMER_CLOCK_FREQUENCY);
 	//*Copy_u8ICU_OffTime= Timer_u16OffTime ;
 }
-
 /*********************************************************************************************************************/
 void Timer_voidIntialize(void){
 	SREG |= 0x80; // Enable Global Interrupt
@@ -95,8 +94,8 @@ void Timer_voidSetOCPinMode(u8 Copy_u8TimerIndex, u8 Copy_u8OC_PinMode){
 					TCCR1A|=Copy_u8OC_PinMode;
 				}
 				else {
-					TCCR1B &= 0xCF;
-					TCCR1B|=Copy_u8OC_PinMode;
+					TCCR1A &= 0xCF;
+					TCCR1A|=Copy_u8OC_PinMode;
 				}
 				break;
 			case TIMER_INDEX_TIMER2: TCCR2 &=0xCF;TCCR2|=Copy_u8OC_PinMode;break;
@@ -155,16 +154,32 @@ void Timer_voidSetCallback(u8 Copy_u8TimerCallbackMode,void (*Copy_ptr)(void)){
 			case TIMER_CALLBACK_TIMER0_OVERFLOW:TIMSK |= TIMER_INTERRUPT_ENABLE_MASK_TIMER0_OVERFLOW;PvoidCallback[7] = Copy_ptr;break;
 				}
 }
+void Timer_voidWritePWM(u8 Copy_u8OCPinIndex,u8 Copy_u8PWMValue){
+	switch (Copy_u8OCPinIndex){
+		case TIMER_OC_PIN_INDEX_OCR0 :  OCR0=Copy_u8PWMValue;break;
+		case TIMER_OC_PIN_INDEX_OCR1A : OCR1A = Copy_u8PWMValue;break;
+		case TIMER_OC_PIN_INDEX_OCR1B : OCR1B = Copy_u8PWMValue;break;
+		case TIMER_OC_PIN_INDEX_OCR2 :  OCR2 = Copy_u8PWMValue;break;
+		}
+}
+void Timer_voidInitializeOCPin(u8 Copy_u8OCPinIndex){
+	switch (Copy_u8OCPinIndex){
+		case TIMER_OC_PIN_INDEX_OCR0 :  DIO_u8SetPinDirection(DIO_U8_PIN_B3,DIO_U8_OUTPUT);break;
+		case TIMER_OC_PIN_INDEX_OCR1A : DIO_u8SetPinDirection(DIO_U8_PIN_D5,DIO_U8_OUTPUT);break;
+		case TIMER_OC_PIN_INDEX_OCR1B : DIO_u8SetPinDirection(DIO_U8_PIN_D4,DIO_U8_OUTPUT);break;
+		case TIMER_OC_PIN_INDEX_OCR2 :  DIO_u8SetPinDirection(DIO_U8_PIN_D7,DIO_U8_OUTPUT);break;
+		}
+}
 void __vector_4 (void)//compare timer2
 {
 	if (PvoidCallback[0] !=NULL){
-				PvoidCallback[2]();
+				PvoidCallback[0]();
 			}
 }
-void __vector_5 (void)//overflow timer1
+void __vector_5 (void)//overflow timer2
 {
 	if (PvoidCallback[1] !=NULL){
-				PvoidCallback[2]();
+				PvoidCallback[1]();
 			}
 }
 void __vector_6 (void)//capture timer1
