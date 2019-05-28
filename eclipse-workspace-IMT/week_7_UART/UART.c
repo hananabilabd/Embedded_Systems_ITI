@@ -39,6 +39,12 @@ void UART_TransmitData(u8 Data){
 	while(get_bit(UCSRA,5)==0);
 	UDR = Data;
 }
+void UART_TransmitData_Assaf(u8 Data){
+	UDR = Data;
+	while(get_bit(UCSRA,6)==0); // wait until transmit complete and flag is raised to 1 
+	set_bit(UCSRA,6); // write 1 on transmit complete flag to clear it
+	
+}
 u8 UART_ReceiveData(void){
 	while(get_bit(UCSRA,7)==0);
 	/* Clear Flag */

@@ -19,16 +19,16 @@
  */
 //#define MICROCONTROLLER AVR
 
-
+/*
 u8 LCD_Au8DataPins[LCD_DATA_PINS_NB] =
 {
-		  DIO_U8_PIN_C0,// D4
-		  DIO_U8_PIN_C1, //D5
-		  DIO_U8_PIN_C2, //D6
-		  DIO_U8_PIN_C3, //D7
+		  DIO_U8_PIN_A0,// D4
+		  DIO_U8_PIN_A1, //D5
+		  DIO_U8_PIN_A2, //D6
+		  DIO_U8_PIN_A3, //D7
 		
 };
-
+*/
 
 
 

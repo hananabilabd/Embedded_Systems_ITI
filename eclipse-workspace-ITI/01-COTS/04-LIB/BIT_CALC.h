@@ -4,7 +4,7 @@
 
 #define set_bit(reg,bit) (reg=reg |(1<<bit))
 #define clr_bit(reg,bit) (reg=reg &(~(1<<bit)))
-#define get_bit(reg,bit) ((reg >> bit) & 1)
+#define get_bit(reg,bit) ((reg >> bit) & 1) // output of the shift & 1 --> to terminate the 7 higher bits of shifting result
 #define toggle_bit(reg,bit) (reg=(reg ^ (1<<bit)))
 /*
 #define assign_bit(reg ,bitNum, value) \
