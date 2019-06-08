@@ -40,7 +40,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="p8.c|p6.c|p7.c|p5.c|p4.c|p3.c|p2.c|main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="mirrorNumbers.c|countConsecutiveBinaryOnes.c|reverseArray.c|removeArrayDuplication.c|sortingInNewArray.c|swapTwoNumbersWithoutSwap.c|swapArrays.c|numberRepetitionChecking.c|pyramid.c|integerToArray.c|stack.c|FifthRoot.c|countBinaryOnes.c|Sorting.c|main.c|enumTest.c|p1.c|p9.c|p8.c|p6.c|p7.c|p5.c|p4.c|p3.c|p2.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -85,7 +85,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="p8.c|p6.c|p7.c|p5.c|p4.c|p3.c|p2.c|main.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="mirrorNumbers.c|countConsecutiveBinaryOnes.c|reverseArray.c|removeArrayDuplication.c|sortingInNewArray.c|swapTwoNumbersWithoutSwap.c|swapArrays.c|numberRepetitionChecking.c|pyramid.c|integerToArray.c|stack.c|FifthRoot.c|countBinaryOnes.c|Sorting.c|main.c|enumTest.c|p1.c|p9.c|p8.c|p6.c|p7.c|p5.c|p4.c|p3.c|p2.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

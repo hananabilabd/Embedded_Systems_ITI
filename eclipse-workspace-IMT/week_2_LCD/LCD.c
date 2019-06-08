@@ -82,6 +82,21 @@ void LCD_Write_Number(u64 number){
 		LCD_writeCharacter(temp +48);// because of the ask code
 	}
 }
+void convertNumberIntoArray(unsigned int number , char arr[]) { // added recently 
+
+
+    signed int i = 0;
+    do {
+        arr[i] = number % 10; // get unit
+        number /= 10;
+        i++;
+    } while (number != 0);
+    while (i){
+    	i--;
+    printf("%d",arr[i]);
+
+    }
+}
 void LCD_Write_Special(void){
 	s8 i,j;
 	for (i=13,j=0;i>=0,j<=15 ;i--,j++){
