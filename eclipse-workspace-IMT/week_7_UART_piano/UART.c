@@ -41,6 +41,7 @@ void UART_TransmitData(u8 Data){
 }
 u8 UART_ReceiveData(void){
 	while(get_bit(UCSRA,7)==0);
+	/*clear flag */
 	return UDR;
 }
 void UART_TransmitString(u8 *arr){

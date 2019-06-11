@@ -9,6 +9,7 @@
 
 
 #include<stdio.h>
+
 void swap(int *x,int * y){
 	int temp= *x;
 	*x=*y;
@@ -65,7 +66,7 @@ void printArray(int arr[],int size){
 	}
 }
 
-void scanArray(int *arr,int size){
+void scanArray( int *arr,int size){
 	int i=0;
 
 	for (i=0;i<size ;i++){
@@ -77,9 +78,15 @@ int main()
 {
 	int arr[100]={0};
 	unsigned int size ,search;
+	typedef enum {
+			x=1,
+			y=2
+		}test;
+	test t = x;
+	printf("x=%d",t);
+	printf("y=%d",y);
 	printf("Enter array Size=");
 	scanf("%d",&size);
-
 	scanArray(arr,size);
 	Sort(arr,size);
 	printArray(arr,size);
