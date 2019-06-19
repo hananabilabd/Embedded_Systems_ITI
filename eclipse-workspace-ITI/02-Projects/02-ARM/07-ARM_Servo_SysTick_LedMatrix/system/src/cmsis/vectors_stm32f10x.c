@@ -224,8 +224,7 @@ TIM14_IRQHandler(void);
 
 extern unsigned int _estack;
 
-typedef void
-(* const pHandler)(void);
+typedef void(* const pHandler)(void);
 
 // ----------------------------------------------------------------------------
 
